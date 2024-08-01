@@ -46,6 +46,14 @@ h1 {
     color: var(--color-red);
 }
 
+.navbar {
+    transition: 0.3s ease;
+}
+
+.navbar .navbar-brand {
+    transition: 0.3s ease;
+}
+
 .navbar .navbar-brand {
     transition: 0.3s ease;
 }
@@ -132,16 +140,18 @@ h1 {
 
 #weekly-leaderboard .jumbotron {
     background: linear-gradient(to bottom, var(--color-red) 50%, transparent 50%);
+    /* background-image: url('https://as2.ftcdn.net/v2/jpg/04/85/30/73/1000_F_485307387_yqb8sbPp00VjvkUEf7YZr4rftr8ljLNQ.jpg'); */
 }
 
 #weekly-leaderboard h1 {
     color: var(--color-white);
+    /* color: var(--color-red); */
 }
 
-#weekly-leaderboard .card {
+/* #weekly-leaderboard .card {
     border: 0.125rem solid var(--color-grey);
     box-shadow: none;
-}
+} */
 
 #weekly-leaderboard .card:hover {
     transform: translateY(-0.5rem);
@@ -170,9 +180,17 @@ h1 {
     transition: 0.3s ease;
 }
 
-/* .top-1 .card {
-    border: 0.125rem solid var(--color-gold);
-} */
+.top-1 .card {
+    border: 0.125rem solid var(--color-yellow);
+}
+
+.top-2 .card {
+    border: 0.125rem solid var(--color-yellow);
+}
+
+.top-3 .card {
+    border: 0.125rem solid var(--color-yellow);
+}
 
 .medal {
     position: absolute;

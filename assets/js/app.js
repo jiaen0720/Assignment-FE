@@ -31,23 +31,15 @@ AOS.init({
     duration: 700
 });
 
+// Srcooling
+const navbar = document.querySelector('.navbar')
+
+window.addEventListener('scroll', () => {
+    if (this.scrollY > 0) {
+        navbar.classList.add('shadow-sm')
+    } else {
+        navbar.classList.remove('shadow-sm')
+    }
+})
+
 window.addEventListener('load', shootConfettiFromSides);
-
-//document.getElementById('weekly-leaderboard').addEventListener('scroll', shootConfettiFromSides);
-
-// // Function to check if scrolled to the target position
-// function hasScrolledToPosition() {
-//     if (window.scrollY == 500) {
-//         shootConfettiFromSides();
-        
-//         window.removeEventListener('scroll', checkScrollPosition);
-//     }
-// }
-
-// // Optional: Add an event listener to check on scroll
-// window.addEventListener('scroll', () => {
-//     if (hasScrolledToPosition()) {
-//         console.log('You have scrolled to or past the target position.');
-//     }
-// });
-
