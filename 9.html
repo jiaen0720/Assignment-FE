@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .heart-container {
+      position: relative;
+    }
+
+    .heart-icon {
+      font-size: 48px;
+      cursor: pointer;
+    }
+
+    .small-heart {
+      position: absolute;
+      font-size: 24px;
+      animation: fadeAndMove 1s ease-out forwards;
+    }
+
+    @keyframes fadeAndMove {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-50px) translateX(var(--random-x, 0));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart-container">
+    <div class="heart-icon" onclick="createHearts(event)">❤️</div>
+  </div>
+  <script>
+    function createHearts(event) {
+      const heartContainer = event.currentTarget.parentElement;
+      for (let i = 0; i < 10; i++) {
+        const smallHeart = document.createElement("div");
+        smallHeart.classList.add("small-heart");
+        smallHeart.textContent = "❤️";
+        smallHeart.style.left = `${event.clientX - heartContainer.getBoundingClientRect().left}px`;
+        smallHeart.style.top = `${event.clientY - heartContainer.getBoundingClientRect().top}px`;
+        smallHeart.style.setProperty("--random-x", `${Math.random() * 100 - 50}px`);
+
+        heartContainer.appendChild(smallHeart);
+
+        setTimeout(() => {
+          smallHeart.remove();
+        }, 1000);
+      }
+    }
+  </script>
+</body>
+</html>
