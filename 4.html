@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Malaysian Cuisine</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background-image: url('https://example.com/malaysian-food-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Malaysian Cuisine</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#popular-dishes">Popular Dishes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section py-5 mb-5">
+        <div class="container text-center py-5">
+            <h1 class="display-3 fw-bold mb-3">Discover Malaysian Cuisine</h1>
+            <p class="lead mb-4">A melting pot of flavors from Malay, Chinese, and Indian influences</p>
+            <a href="#popular-dishes" class="btn btn-primary btn-lg">Explore Dishes</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container mb-5">
+        <h2 class="text-center mb-4">About Malaysian Cuisine</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Malaysian cuisine is a vibrant tapestry of flavors, blending influences from Malay, Chinese, Indian, and indigenous cultures. The result is a diverse and exciting culinary landscape that offers something for every palate.</p>
+            </div>
+            <div class="col-md-6">
+                <p>From street food to fine dining, Malaysian dishes are known for their bold use of spices, aromatic herbs, and unique cooking techniques. Whether you're savoring a bowl of laksa or indulging in nasi lemak, you're in for a treat!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Dishes Section -->
+    <section id="popular-dishes" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Popular Malaysian Dishes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://example.com/nasi-lemak.jpg" class="card-img-top" alt="Nasi Lemak">
+                        <div class="card-body">
+                            <h5 class="card-title">Nasi Lemak</h5>
+                            <p class="card-text">Fragrant rice cooked in coconut milk, served with sambal, anchovies, peanuts, and cucumber.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://example.com/satay.jpg" class="card-img-top" alt="Satay">
+                        <div class="card-body">
+                            <h5 class="card-title">Satay</h5>
+                            <p class="card-text">Grilled skewered meat served with a rich peanut sauce, cucumbers, and rice cakes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://example.com/laksa.jpg" class="card-img-top" alt="Laksa">
+                        <div class="card-body">
+                            <h5 class="card-title">Laksa</h5>
+                            <p class="card-text">A spicy noodle soup with a coconut curry base, topped with seafood or chicken.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Malaysian Cuisine Explorer. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

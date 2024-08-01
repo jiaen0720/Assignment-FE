@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Hero -->
+    <!-- <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-4">Discover Amazing Cuisines</h1>
+            <p class="lead">Explore a world of flavors with our curated recommendations</p>
+            <a href="#" class="btn btn-primary btn-lg">Explore Now</a>
+        </div>
+    </div> -->
+
+    <!-- Introduction -->
+    <section>
+        <div class="container my-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
+                        alt="Cuisine Image" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-lg-left">
+                        <h1 class="fw-bold">Welcome to Cuisine Recommendations</h1>
+                        <p class="text-muted">We're here to guide you through the diverse and delicious world of global
+                            cuisines.
+                            Whether you're a food enthusiast or just looking to try something new, we've got you
+                            covered.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <section id="popular-dishes" class="bg-light py-5">
+        <div class="container">
+            <h1 class="text-center fw-bold mb-5">Popular Malaysian Dishes</h1>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="card rounded">
+                        <div class="position-relative">
+                            <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
+                                class="card-img-top rounded-top" alt="Nasi Lemak">
+                            <button class="btn-fav" onclick="animateButton(this)"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <div class="card-body p-4 shadow rounded-bottom">
+                            <h4 class="fw-bold">Nasi Lemak</h4>
+                            <p class="text-muted">Fragrant rice cooked in coconut milk, served with sambal, anchovies,
+                                peanuts, and cucumber.</p>
+                            <div>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                                <small class="text-muted ml-2">26 Ratings</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat .item div for more cards -->
+            </div>
+        </div>
+    </section>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 1, // Number of items to show at a time
+                loop: true, // Loop through items
+                margin: 10, // Space between items
+                nav: true, // Show navigation buttons
+                dots: true, // Show dots for pagination
+            });
+        });
+
+        function animateButton(button) {
+            // Add your animation logic here
+        }
+    </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz4fnFO0vW7nADvBhxgQJ0A54VV1JrFgujMDHwpht6z8R/JG0I4a0L0XjT"
+    crossorigin="anonymous"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/aos.js"></script>
+<script src="./assets/js/app.js"></script>
+
+</html>
