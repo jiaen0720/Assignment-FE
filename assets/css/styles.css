@@ -2,18 +2,15 @@
 
 :root {
     --font-base: "Poppins";
-
-    /* Color variable */
-    --color-black: #00000019;
+    --color-black: #31303a;
+    --color-bronze: #cd7f32;
+    --color-gold: #ffd700;
     --color-grey: #cccccc;
     --color-purple: #7d2ae8;
     --color-red: #c21807;
+    --color-silver: #b0abab;
     --color-white: #fefefe;
     --color-yellow: #ffc107;
-
-    --color-gold: #ffd700;
-    --color-silver: #c0c0c0;
-    --color-bronze: #cd7f32;
 }
 
 * {
@@ -42,15 +39,11 @@ img {
 }
 
 h1 {
-    font-size: 3rem;
+    word-break: break-word;
     color: var(--color-red);
 }
 
 .navbar {
-    transition: 0.3s ease;
-}
-
-.navbar .navbar-brand {
     transition: 0.3s ease;
 }
 
@@ -73,16 +66,6 @@ h1 {
 .navbar .navbar-nav .nav-item a.active {
     color: var(--color-red);
     transition: 0.3s ease;
-}
-
-@media (min-width: 992px) {
-
-    .navbar .navbar-nav .nav-item a:hover,
-    .navbar .navbar-nav .nav-item a.active {
-        color: var(--color-red);
-        border-bottom: 0.125rem solid var(--color-red);
-        transition: 0.3s ease;
-    }
 }
 
 .btn-contact-us {
@@ -140,56 +123,31 @@ h1 {
 
 #weekly-leaderboard .jumbotron {
     background: linear-gradient(to bottom, var(--color-red) 50%, transparent 50%);
-    /* background-image: url('https://as2.ftcdn.net/v2/jpg/04/85/30/73/1000_F_485307387_yqb8sbPp00VjvkUEf7YZr4rftr8ljLNQ.jpg'); */
+    /* background-image: url('https://png.pngtree.com/background/20230612/original/pngtree-chef-with-the-chef-hat-in-the-kitchen-preparing-some-plates-picture-image_3182645.jpg'); */
 }
 
 #weekly-leaderboard h1 {
     color: var(--color-white);
-    /* color: var(--color-red); */
 }
-
-/* #weekly-leaderboard .card {
-    border: 0.125rem solid var(--color-grey);
-    box-shadow: none;
-} */
 
 #weekly-leaderboard .card:hover {
     transform: translateY(-0.5rem);
-}
-
-.top-1 {
-    transform: translateY(-2rem);
-}
-
-.top-1::before {
-    content: '';
-    position: absolute;
-    top: -0.25rem;
-    left: -0.25rem;
-    right: -0.25rem;
-    bottom: -0.25rem;
-    background: var(--color-gold);
-    z-index: -1;
-    filter: blur(3rem);
-    opacity: 0;
     transition: 0.3s ease;
 }
 
-.top-1:hover::before {
-    opacity: 0.3;
+.top-1 .card:hover {
+    box-shadow: 0 0 5rem 0 var(--color-gold);
     transition: 0.3s ease;
 }
 
-.top-1 .card {
-    border: 0.125rem solid var(--color-yellow);
+.top-2 .card:hover {
+    box-shadow: 0 0 5rem 0 var(--color-silver);
+    transition: 0.3s ease;
 }
 
-.top-2 .card {
-    border: 0.125rem solid var(--color-yellow);
-}
-
-.top-3 .card {
-    border: 0.125rem solid var(--color-yellow);
+.top-3 .card:hover {
+    box-shadow: 0 0 5rem 0 var(--color-bronze);
+    transition: 0.3s ease;
 }
 
 .medal {
@@ -240,26 +198,12 @@ h1 {
     animation: click-animation 0.3s ease-out forwards;
 }
 
-@keyframes click-animation {
-    0% {
-        transform: scale(0.9);
-    }
-
-    50% {
-        transform: scale(1.6);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
 #recommended-restaurant .card:hover {
     transform: scale(1.1);
     transition: 0.3s ease;
 }
 
-.btn-back-to-top {
+.btn-go-to-top {
     position: fixed;
     bottom: 1.25rem;
     right: 1.25rem;
@@ -272,10 +216,46 @@ h1 {
     border-radius: 50%;
     z-index: 1;
     cursor: pointer;
-    box-shadow: 0 0.125rem 0.25rem var(--color-grey);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.btn-back-to-top:hover {
+.btn-go-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s ease;
+}
+
+.btn-go-to-top:hover {
     background-color: var(--color-red);
     transition: 0.3s ease;
+}
+
+@media (min-width: 992px) {
+
+    .navbar .navbar-nav .nav-item a:hover,
+    .navbar .navbar-nav .nav-item a.active {
+        color: var(--color-red);
+        border-bottom: 0.125rem solid var(--color-red);
+        transition: 0.3s ease;
+    }
+
+    .top-1 {
+        transform: translateY(-2rem);
+    }
+}
+
+@keyframes click-animation {
+    0% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.6);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

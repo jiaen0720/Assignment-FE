@@ -15,6 +15,9 @@
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="./assets/css/all.min.css">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -25,7 +28,7 @@
             <!-- Logo on the left -->
             <a class="navbar-brand d-flex" href="#">
                 <div class="d-flex flex-column lh-1">
-                    <p class="mb-0">MALAYSIAN CUISINE</p>
+                    <p class="mb-0">Malaysian Cuisine</p>
                     <p class="mb-0 fs-6">The Food Paradise</p>
                 </div>
             </a>
@@ -72,7 +75,7 @@
                             alt="Nasi Lemak" class="img-fluid rounded-circle">
                     </div>
                     <div class="col-lg-6" data-aos="fade-down">
-                        <h1 class="fw-bold">Welcome to Cuisine Recommendations</h1>
+                        <h1 class="fw-bold">Welcome to Cuisine<br>Recommendations</h1>
                         <p class="text-muted">We're here to guide you through the diverse and delicious world of
                             global
                             cuisines.
@@ -90,78 +93,81 @@
         <div class="jumbotron">
             <div class="container">
                 <h1 class="text-center fw-bold mb-5" data-aos="fade-down" data-aos-delay="70">Weekly Leaderboard</h1>
-                <div class="row bg-white shadow rounded-4 pt-5" data-aos="fade-down" data-aos-delay="80">
-                    <div class="col-md-4 p-4 top-2">
-                        <div class="card" data-aos="fade-down" data-aos-delay="90">
-                            <div class="position-relative">
-                                <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
-                                    class="card-img-top" alt="Nasi Lemak">
-                                <span class="medal medal-silver">Top 2</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Nasi Lemak</h5>
-                                <p class="card-text">Fragrant rice cooked in coconut milk, served with sambal,
-                                    anchovies,
-                                    peanuts, and cucumber.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="ratings">
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star-half-alt text-warning"></i>
+                <div class="p-4 bg-white shadow rounded-4" data-aos="fade-down" data-aos-delay="80">
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4 p-4 top-2">
+                            <div class="card" data-aos="fade-down" data-aos-delay="90">
+                                <div class="position-relative">
+                                    <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
+                                        class="card-img-top" alt="Nasi Lemak">
+                                    <span class="medal medal-silver">Top 2</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Nasi Lemak</h5>
+                                    <p class="card-text">Fragrant rice cooked in coconut milk, served with sambal,
+                                        anchovies,
+                                        peanuts, and cucumber.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="ratings">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">26 Ratings</small>
                                     </div>
-                                    <small class="text-muted">26 Ratings</small>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 p-4 top-1">
-                        <div class="card" data-aos="fade-down" data-aos-delay="100">
-                            <div class="position-relative">
-                                <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
-                                    class="card-img-top" alt="Nasi Lemak">
-                                <span class="medal medal-gold">Top 1</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Nasi Lemak</h5>
-                                <p class="card-text">Fragrant rice cooked in coconut milk, served with sambal,
-                                    anchovies,
-                                    peanuts, and cucumber.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="ratings">
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
+                        <div class="col-md-4 p-4 top-1">
+                            <div class="card" data-aos="fade-down" data-aos-delay="100">
+                                <div class="position-relative">
+                                    <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
+                                        class="card-img-top" alt="Nasi Lemak">
+                                    <span class="medal medal-gold">Top 1</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Nasi Lemak</h5>
+                                    <p class="card-text">Fragrant rice cooked in coconut milk, served with sambal,
+                                        anchovies,
+                                        peanuts, and cucumber.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="ratings">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">30 Ratings</small>
                                     </div>
-                                    <small class="text-muted">30 Ratings</small>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 p-4 top-3">
-                        <div class="card" data-aos="fade-down" data-aos-delay="80">
-                            <div class="position-relative">
-                                <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
-                                    class="card-img-top" alt="Nasi Lemak">
-                                <span class="medal medal-bronze">Top 3</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Nasi Lemak</h5>
-                                <p class="card-text">Fragrant rice cooked in coconut milk, served with sambal,
-                                    anchovies,
-                                    peanuts, and cucumber.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="ratings">
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="fas fa-star text-warning"></i>
-                                        <i class="far fa-star text-warning"></i>
+                        <div class="col-md-4 p-4 top-3">
+                            <div class="card" data-aos="fade-down" data-aos-delay="80">
+                                <div class="position-relative">
+                                    <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
+                                        class="card-img-top" alt="Nasi Lemak">
+                                    <span class="medal medal-bronze">Top 3</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Nasi Lemak</h5>
+                                    <p class="card-text">Fragrant rice cooked in coconut milk, served with sambal,
+                                        anchovies,
+                                        peanuts, and cucumber.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="ratings">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">24 Ratings</small>
                                     </div>
-                                    <small class="text-muted">24 Ratings</small>
                                 </div>
                             </div>
                         </div>
@@ -175,15 +181,15 @@
     <section id="popular-malaysian-dishes">
         <div class="jumbotron">
             <div class="container">
-                <h1 class="text-center fw-bold mb-5" data-aos="fade-down" data-aos-delay="90">Popular Malaysian Dishes</h1>
+                <h1 class="text-center fw-bold mb-5" data-aos="fade-down" data-aos-delay="90">Popular Malaysian Dishes
+                </h1>
                 <div class="row" data-aos="fade-down" data-aos-delay="100">
                     <div class="col-md-3 mb-4">
                         <div class="card">
                             <div class="position-relative">
                                 <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
                                     class="card-img-top rounded-top" alt="Nasi Lemak">
-                                <button class="btn-fav" onclick="animateButton(this)"><i
-                                        class="fas fa-heart"></i></button>
+                                <button class="btn-fav"><i class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body p-4">
                                 <h4 class="fw-bold">Nasi Lemak</h4>
@@ -206,8 +212,7 @@
                             <div class="position-relative">
                                 <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
                                     class="card-img-top" alt="Nasi Lemak">
-                                <button class="btn-fav" onclick="animateButton(this)"><i
-                                        class="fas fa-heart"></i></button>
+                                <button class="btn-fav"><i class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body p-4">
                                 <h4 class="fw-bold">Nasi Lemak</h4>
@@ -230,8 +235,7 @@
                             <div class="position-relative">
                                 <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
                                     class="card-img-top" alt="Nasi Lemak">
-                                <button class="btn-fav" onclick="animateButton(this)"><i
-                                        class="fas fa-heart"></i></button>
+                                <button class="btn-fav"><i class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body p-4">
                                 <h4 class="fw-bold">Nasi Lemak</h4>
@@ -315,7 +319,8 @@
     <section id="recommended-restaurant">
         <div class="jumbotron">
             <div class="container">
-                <h1 class="text-center fw-bold mb-5" data-aos="fade-down" data-aos-delay="90">Recommended Restaurant</h1>
+                <h1 class="text-center fw-bold mb-5" data-aos="fade-down" data-aos-delay="90">Recommended Restaurant
+                </h1>
                 <div class="row" data-aos="fade-down" data-aos-delay="100">
                     <div class="col-md-4 p-4">
                         <div class="card">
@@ -336,7 +341,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-down" data-aos-delay="100">
                     <div class="col-md-4 p-4">
                         <div class="card">
                             <img src="https://www.maggi.my/sites/default/files/styles/home_stage_944_531/public/srh_recipes/8e653b8b22d5840f7cc774e3b3386b8b.jpg?h=a92f03cd&itok=i3wMm3yg"
@@ -361,7 +366,7 @@
     </section>
 
     <!-- Back to top button -->
-    <a href="#" class="btn-back-to-top"><i class="fas fa-chevron-up"></i></a>
+    <a href="#" class="btn-go-to-top"><i class="fas fa-chevron-up"></i></a>
 </body>
 
 <!-- Bootstrap -->
@@ -370,10 +375,13 @@
 <!-- Animation -->
 <script src="./assets/js/aos.js"></script>
 
+<!-- Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <!-- Custome JS -->
 <script src="./assets/js/app.js"></script>
-
-<!-- Animation -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
 </html>

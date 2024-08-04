@@ -1,14 +1,43 @@
-function animateButton(button) {
+// Select the "Go to Top" button
+const favoriteButton = document.querySelector('.btn-fav');
+
+// Function to show or hide the "Go to Top" button
+window.addEventListener('click', () => {
     // Add the 'clicked' class to trigger the animation
-    button.classList.add('clicked');
+    favoriteButton.classList.add('clicked');
 
     // Remove the 'clicked' class after the animation is done
     setTimeout(() => {
-        button.classList.remove('clicked');
+        favoriteButton.classList.remove('clicked');
     }, 300); // Match the duration of the animation
-}
+});
 
-function shootConfettiFromSides() {
+// Select the "Go to Top" button
+const goTopButton = document.querySelector('.btn-go-to-top');
+
+// Function to show or hide the "Go to Top" button
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+        goTopButton.classList.add('show');
+    } else {
+        goTopButton.classList.remove('show');
+    }
+});
+
+// Select the navbar element
+const navbar = document.querySelector('.navbar');
+
+// Function to add or remove shadow effect on navbar
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        navbar.classList.add('shadow-sm');
+    } else {
+        navbar.classList.remove('shadow-sm');
+    }
+});
+
+// Function to show confetti
+window.addEventListener('load', () => {
     // Confetti from left
     confetti({
         particleCount: 200,
@@ -24,22 +53,9 @@ function shootConfettiFromSides() {
         spread: 100,
         origin: { x: 1, y: 0.9 }
     });
-}
+});
 
-// AOS initiation
+// AOS init
 AOS.init({
     duration: 700
 });
-
-// Srcooling
-const navbar = document.querySelector('.navbar')
-
-window.addEventListener('scroll', () => {
-    if (this.scrollY > 0) {
-        navbar.classList.add('shadow-sm')
-    } else {
-        navbar.classList.remove('shadow-sm')
-    }
-})
-
-window.addEventListener('load', shootConfettiFromSides);
