@@ -43,29 +43,25 @@ h1 {
     color: var(--color-red);
 }
 
-.navbar {
-    transition: 0.3s ease;
-}
-
 .navbar .navbar-brand {
-    transition: 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar .navbar-brand:hover {
     color: var(--color-red);
     transform: scale(1.1);
-    transition: 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar .navbar-nav .nav-item a {
     border-bottom: 0.125rem solid transparent;
-    transition: 0.3s ease;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
 }
 
 .navbar .navbar-nav .nav-item a:hover,
 .navbar .navbar-nav .nav-item a.active {
     color: var(--color-red);
-    transition: 0.3s ease;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
 }
 
 .btn-contact-us {
@@ -78,7 +74,7 @@ h1 {
     background-color: transparent;
     font-weight: 600;
     overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: scale 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .btn-contact-us::before {
@@ -92,7 +88,7 @@ h1 {
     background-color: var(--color-red);
     scale: 0;
     z-index: -1;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: scale 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .btn-contact-us:hover::before {
@@ -102,11 +98,7 @@ h1 {
 .btn-contact-us:hover {
     color: var(--color-white);
     scale: 1.1;
-    box-shadow: 0 0px 20px var(--color-grey);
-}
-
-.btn-contact-us:active {
-    scale: 1;
+    box-shadow: 0 0 1.25rem var(--color-grey);
 }
 
 .card {
@@ -123,11 +115,14 @@ h1 {
 
 #weekly-leaderboard .jumbotron {
     background: linear-gradient(to bottom, var(--color-red) 50%, transparent 50%);
-    /* background-image: url('https://png.pngtree.com/background/20230612/original/pngtree-chef-with-the-chef-hat-in-the-kitchen-preparing-some-plates-picture-image_3182645.jpg'); */
 }
 
 #weekly-leaderboard h1 {
     color: var(--color-white);
+}
+
+#weekly-leaderboard .card {
+    transition: 0.3s ease;
 }
 
 #weekly-leaderboard .card:hover {
@@ -135,19 +130,22 @@ h1 {
     transition: 0.3s ease;
 }
 
+#weekly-leaderboard .card img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+}
+
 .top-1 .card:hover {
     box-shadow: 0 0 5rem 0 var(--color-gold);
-    transition: 0.3s ease;
 }
 
 .top-2 .card:hover {
     box-shadow: 0 0 5rem 0 var(--color-silver);
-    transition: 0.3s ease;
 }
 
 .top-3 .card:hover {
     box-shadow: 0 0 5rem 0 var(--color-bronze);
-    transition: 0.3s ease;
 }
 
 .medal {
@@ -170,6 +168,12 @@ h1 {
 
 .medal-bronze {
     background-color: var(--color-bronze);
+}
+
+#popular-malaysian-dishes .card img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
 }
 
 .btn-fav {
@@ -198,9 +202,41 @@ h1 {
     animation: click-animation 0.3s ease-out forwards;
 }
 
+#featured-news .card img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+#featured-news .card img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+#recommended-restaurant .card {
+    width: 100%;
+    height: 18.75rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
 #recommended-restaurant .card:hover {
     transform: scale(1.1);
     transition: 0.3s ease;
+}
+
+#recommended-restaurant .card a {
+    width: 100%;
+    height: 100%;
+}
+
+#recommended-restaurant .card a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .btn-go-to-top {
@@ -221,6 +257,8 @@ h1 {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+
+
 .btn-go-to-top.show {
     opacity: 1;
     visibility: visible;
@@ -238,7 +276,7 @@ h1 {
     .navbar .navbar-nav .nav-item a.active {
         color: var(--color-red);
         border-bottom: 0.125rem solid var(--color-red);
-        transition: 0.3s ease;
+        transition: border-bottom 0.3s ease, color 0.3s ease;
     }
 
     .top-1 {
@@ -259,3 +297,87 @@ h1 {
         transform: scale(1);
     }
 }
+
+
+/* #video .container {
+    object-fit: cover;
+} */
+
+
+/* .card-img-left {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    margin: 15px;
+    border-radius: 5%;
+}
+
+
+#news .card-body {
+    height: 100px;
+}
+
+#news .card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#news .card {
+    height: 145px;
+} */
+
+/* .bottom-right-card {
+    position: absolute;
+    right: 1250px;
+} */
+
+/* .card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+} */
+
+
+/* .card {
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+}
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 0.9rem;
+}
+.card-footer {
+    font-size: 0.8rem;
+    color: #bbbbbb;
+} */
+
+/* .card img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+} */
+
+/* #breaking-news .custom {
+    background-image: url('https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%; 
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* #news img {
+    width: 75px;
+    height: 75px;
+}
+
+#breaking-news img {
+    height: 45px;
+} */

@@ -1,15 +1,17 @@
 // Select the "Go to Top" button
-const favoriteButton = document.querySelector('.btn-fav');
+const favoriteButtons = document.querySelectorAll('.btn-fav');
 
-// Function to show or hide the "Go to Top" button
-window.addEventListener('click', () => {
-    // Add the 'clicked' class to trigger the animation
-    favoriteButton.classList.add('clicked');
+// Function to show clicked effect
+favoriteButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Add the 'clicked' class to trigger the animation on the clicked button
+        button.classList.add('clicked');
 
-    // Remove the 'clicked' class after the animation is done
-    setTimeout(() => {
-        favoriteButton.classList.remove('clicked');
-    }, 300); // Match the duration of the animation
+        // Remove the 'clicked' class after the animation is done
+        setTimeout(() => {
+            button.classList.remove('clicked');
+        }, 300); // Match the duration of the animation
+    });
 });
 
 // Select the "Go to Top" button
