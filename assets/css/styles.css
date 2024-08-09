@@ -40,6 +40,7 @@ h1 {
 
 .navbar {
     transition: background-color 0.3s ease;
+    font-weight: 580;
 }
 
 .navbar .navbar-brand {
@@ -53,7 +54,7 @@ h1 {
 }
 
 .navbar .navbar-nav .nav-item a {
-    border-bottom: 0.125rem solid transparent;
+    border-bottom: 0.1875rem solid transparent;
     transition: border-bottom 0.3s ease, color 0.3s ease;
 }
 
@@ -122,12 +123,12 @@ h1 {
     object-fit: cover;
 }
 
-#featured-news .jumbotron {
+/* #featured-news .jumbotron {
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
         url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
     object-fit: cover;
-}
+} */
 
 #recommended-restaurant .jumbotron {
     background-image:
@@ -339,7 +340,7 @@ h1 {
     .navbar .navbar-nav .nav-item a:hover,
     .navbar .navbar-nav .nav-item a.active {
         color: var(--color-red);
-        border-bottom: 0.125rem solid var(--color-red);
+        border-bottom: 0.1875rem solid var(--color-red);
         transition: border-bottom 0.3s ease, color 0.3s ease;
     }
 
