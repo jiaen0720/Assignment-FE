@@ -28,11 +28,6 @@ body {
     background-color: var(--color-white);
 }
 
-section {
-    margin-top: 3.75rem;
-    margin-bottom: 12.5rem;
-}
-
 img {
     width: 100%;
     height: auto;
@@ -41,6 +36,10 @@ img {
 h1 {
     word-break: break-word;
     color: var(--color-red);
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
 }
 
 .navbar .navbar-brand {
@@ -71,7 +70,7 @@ h1 {
     border: 0.125rem solid var(--color-red);
     border-radius: 9rem;
     color: var(--color-red);
-    background-color: transparent;
+    background-color: var(--color-white);
     font-weight: 600;
     overflow: hidden;
     transition: scale 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -101,16 +100,48 @@ h1 {
     box-shadow: 0 0 1.25rem var(--color-grey);
 }
 
+.jumbotron {
+    padding: 6rem 3rem;
+    /* background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover; */
+}
+
+#hero .jumbotron {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover;
+}
+
+#popular-malaysian-dishes .jumbotron {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover;
+}
+
+#featured-news .jumbotron {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover;
+}
+
+#recommended-restaurant .jumbotron {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover;
+}
+
 .card {
     border: none;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0.25rem 1rem var(--color-grey);
     transition: 0.3s ease;
-}
-
-.jumbotron {
-    padding: 3rem;
 }
 
 #weekly-leaderboard .jumbotron {
@@ -176,6 +207,26 @@ h1 {
     object-fit: cover;
 }
 
+#popular-malaysian-dishes .card-body h5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+#popular-malaysian-dishes .card-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5rem;
+    line-height: 1.5rem;
+}
+
 .btn-fav {
     position: absolute;
     top: 0.75rem;
@@ -208,10 +259,8 @@ h1 {
     object-fit: cover;
 }
 
-#featured-news .card img {
-    width: 100%;
-    height: 25rem;
-    object-fit: cover;
+#featured-news .card a h5:hover {
+    color: var(--color-red);
 }
 
 #recommended-restaurant .card {
@@ -257,8 +306,6 @@ h1 {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-
-
 .btn-go-to-top.show {
     opacity: 1;
     visibility: visible;
@@ -267,6 +314,23 @@ h1 {
 
 .btn-go-to-top:hover {
     background-color: var(--color-red);
+    transition: 0.3s ease;
+}
+
+.social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.125rem;
+    color: var(--color-white);
+    border: 0.125rem solid var(--color-white);
+    transition: 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--color-white);
+    background-color: var(--color-red);
+    border-color: var(--color-red);
     transition: 0.3s ease;
 }
 
@@ -297,87 +361,3 @@ h1 {
         transform: scale(1);
     }
 }
-
-
-/* #video .container {
-    object-fit: cover;
-} */
-
-
-/* .card-img-left {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    margin: 15px;
-    border-radius: 5%;
-}
-
-
-#news .card-body {
-    height: 100px;
-}
-
-#news .card-title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-#news .card {
-    height: 145px;
-} */
-
-/* .bottom-right-card {
-    position: absolute;
-    right: 1250px;
-} */
-
-/* .card-title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: block;
-} */
-
-
-/* .card {
-    background-color: #1c1c1c;
-    color: white;
-    border: none;
-}
-.card-title {
-    font-size: 1rem;
-    font-weight: bold;
-}
-.card-text {
-    font-size: 0.9rem;
-}
-.card-footer {
-    font-size: 0.8rem;
-    color: #bbbbbb;
-} */
-
-/* .card img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-} */
-
-/* #breaking-news .custom {
-    background-image: url('https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%; 
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-/* #news img {
-    width: 75px;
-    height: 75px;
-}
-
-#breaking-news img {
-    height: 45px;
-} */
