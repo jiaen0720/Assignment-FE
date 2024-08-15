@@ -3,25 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gap Example</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Latest News and Malaysian Cuisine News</title>
     <style>
-        .box {
-            background-color: #3498db;
-            border: 1px solid #000;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
             padding: 20px;
-            text-align: center;
-            color: #fff;
+            background-color: #f4f4f4;
+        }
+        .section-title {
+            font-size: 24px;
+            margin-top: 40px;
+            color: #333;
+        }
+        .news-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .news-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .news-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .news-item h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .news-item p {
+            margin: 0;
+            color: #666;
+        }
+        .news-item a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .news-meta {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-4">
-        <div class="d-flex gap-3">
-            <div class="box">Item 1</div>
-            <div class="box">Item 2</div>
-            <div class="box">Item 3</div>
-        </div>
+    <h1 class="section-title">Malaysian Cuisine News</h1>
+    <div class="news-container" id="malaysian-cuisine-news-container">
+        <!-- Malaysian cuisine news articles will be inserted here -->
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const apiKey = "fd448bf94db043b48c2a3f0c228f8b0b";
+            
+
+            // Fetch Malaysian cuisine-related news
+            const malaysianCuisineNewsUrl = `https://newsapi.org/v2/everything?q=Malaysian+Restaurant&sortBy=popularity&apiKey=${apiKey}`;
+            fetchNews(malaysianCuisineNewsUrl, "malaysian-cuisine-news-container");
+
+            function fetchNews(url, containerId) {
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        const newsContainer = document.getElementById(containerId);
+                        data.articles.forEach(article => {
+                            
+                            const newsItem = document.createElement("div");
+                            newsItem.className = "news-item";
+
+                            // Add image
+                            if (article.urlToImage) {
+                                const image = document.createElement("img");
+                                image.src = article.urlToImage;
+                                image.alt = article.title;
+                                newsItem.appendChild(image);
+                            }
+
+                            const textContainer = document.createElement("div");
+
+                            const title = document.createElement("h2");
+                            title.textContent = article.title;
+                            textContainer.appendChild(title);
+
+                            const description = document.createElement("p");
+                            description.textContent = article.description;
+                            textContainer.appendChild(description);
+
+                            // Add publisher and date
+                            const meta = document.createElement("div");
+                            meta.className = "news-meta";
+                            const date = new Date(article.publishedAt);
+                            meta.textContent = `Published by ${article.source.name} on ${date.toLocaleDateString()} at ${date.toLocaleTimeString()}`;
+                            textContainer.appendChild(meta);
+
+                            const link = document.createElement("a");
+                            link.href = article.url;
+                            link.textContent = "Read more";
+                            link.target = "_blank";
+                            textContainer.appendChild(link);
+
+                            newsItem.appendChild(textContainer);
+                            newsContainer.appendChild(newsItem);
+                        });
+                    })
+                    .catch(error => {
+                        console.error("Error fetching the news:", error);
+                    });
+            }
+        });
+    </script>
+
 </body>
 </html>

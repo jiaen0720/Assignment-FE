@@ -6,6 +6,7 @@
     --color-bronze: #cd7f32;
     --color-gold: #ffd700;
     --color-grey: #cccccc;
+    --color-light-grey: #f5f5f5;
     --color-purple: #7d2ae8;
     --color-red: #c21807;
     --color-silver: #b0abab;
@@ -254,12 +255,6 @@ h1 {
     animation: click-animation 0.3s ease-out forwards;
 }
 
-#featured-news .card img {
-    width: 100%;
-    height: 480px;
-    object-fit: cover;
-}
-
 #featured-news .card a h5:hover {
     color: var(--color-red);
 }
@@ -318,7 +313,7 @@ h1 {
     transition: 0.3s ease;
 }
 
-.social-icon {
+.icon-social-media {
     width: 2.5rem;
     height: 2.5rem;
     line-height: 2.5rem;
@@ -328,7 +323,7 @@ h1 {
     transition: 0.3s ease;
 }
 
-.social-icon:hover {
+.icon-social-media:hover {
     color: var(--color-white);
     background-color: var(--color-red);
     border-color: var(--color-red);
@@ -349,6 +344,14 @@ h1 {
     }
 }
 
+@media (min-width: 993px) {
+    #featured-news .card img {
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+    }
+}
+
 @keyframes click-animation {
     0% {
         transform: scale(0.9);
@@ -361,4 +364,97 @@ h1 {
     100% {
         transform: scale(1);
     }
+}
+
+
+
+
+#top-stories .jumbotron {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover;
+}
+
+#featured-video .jumbotron {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover;
+}
+
+#topics .jumbotron {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover;
+}
+
+#recommended-reading .jumbotron {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: var(--color-grey);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    top: 50%;
+}
+
+.carousel-control-prev {
+    left: -3.75rem;
+}
+
+.carousel-control-next {
+    right: -3.75rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+#topics h4 {
+    color: var(--color-red);
+}
+
+#topics .card {
+    min-height: 9.25rem;
+}
+
+#topics a {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+#topics a:hover {
+    color: var(--color-red);
+}
+
+#topics .card img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+#topics .card-body span {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5rem;
+    line-height: 1.5rem;
+}
+
+#recommended-reading .card img {
+    width: auto;
+    height: 144px;
+    object-fit: cover;
 }

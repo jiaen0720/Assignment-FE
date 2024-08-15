@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommendation</title>
+    <title>News</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
@@ -20,323 +20,412 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-white">
+    <!-- nagivation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
         <div class="container">
-            <!-- Logo on the left -->
-            <a class="navbar-brand d-flex" href="#">
-                <div class="d-flex flex-column lh-1">
-                    <p class="mb-0">Malaysian Cuisine</p>
-                    <p class="mb-0 fs-6 fw-light text-muted">The Food Paradise</p>
-                </div>
-            </a>
-
-            <!-- Toggle button for mobile view -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Centered navigation links -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#">Explore</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#">About</a>
-                    </li>
-                </ul>
+            <div class="d-flex">
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand d-flex mx-3" href="#">
+                    <div class="d-flex flex-column lh-1">
+                        <p class="mb-0">Malaysian Cuisine</p>
+                        <p class="mb-0 fs-6 fw-light">The Food Paradise</p>
+                    </div>
+                </a>
             </div>
-
-            <!-- Button on the right -->
-            <div class="d-none d-lg-block">
-                <button type="button" class="btn-contact-us">Contact us</button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        <div class="d-flex flex-column lh-1">
+                            <p class="mb-0">Malaysian Cuisine</p>
+                            <p class="mb-0 fs-6 fw-light text-muted">The Food Paradise</p>
+                        </div>
+                    </h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">Explore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">About</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-start align-items-center mx-2 mt-3 mt-lg-0 ">
+                        <button type="button" class="btn-contact-us">Contact us</button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <br>
-    <br>
-
-    <section id="breaking-news">
+    <!-- Top stories -->
+    <section id="top-stories">
         <div class="jumbotron">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9 p-2 position-relative">
-                        <div class="position-absolute top-0 start-0"><img
-                                src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                        </div>
-                        <div class="position-absolute top-0 end-0"><img
-                                src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                        </div>
-                        <div class="position-absolute top-50 start-50"><img
-                                src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                        </div>
-                        <div class="position-absolute bottom-50 end-50"><img
-                                src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                        </div>
-                        <div class="position-absolute bottom-0 start-0"><img
-                                src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                        </div>
-                        <div class="position-absolute bottom-0 end-0"><img
-                                src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                        </div>
-                        <!-- <div class="card">
-                            <img
-                                src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                            <div class="row">
-                                <div class="col-md-9">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
+                                class="card-img" alt="...">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-end">
+                                <div class="bg-white text-dark p-3 rounded-4">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to
+                                        additional content. This content is a little bit longer.</p>
+                                    <small>Last updated 3 mins ago</small>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <p>Hello World</p>
-                                        </div>
-                                    </div>
-                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- <div class="d-flex flex-column justify-content-between" style="height: 69vh;">
+                            <div class="card">
+                                <img
+                                    src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
+                            </div>
+                            <div class="card">
+                                <img
+                                    src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
                             </div>
                         </div> -->
                     </div>
-                    <div class="col-md-3 p-1">
-                        <div class="d-flex flex-column">
-                            <div class="p-2">
-                                <div class="card">
-                                    <img
-                                        src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                                </div>
-                            </div>
-                            <div class="p-2">
-                                <div class="card">
-                                    <img
-                                        src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                                </div>
-                            </div>
-                            <div class="p-2">
-                                <div class="card">
-                                    <img
-                                        src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="video">
+    <!-- Featured video -->
+    <section id="featured-video">
         <div class="jumbotron">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="text-center fw-bold mb-5">Featured News</h1>
-                        <div class="card">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <iframe width=100% height=100% src="https://www.youtube.com/embed/vvbA25MbIHI"
-                                        title="Can Gordon Ramsay Get His Uncle Crown Back from Uncle Roger??"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                                        style="object-fit: cover;"></iframe>
+                <h1 class="text-center fw-bold mb-5">Featured Video</h1>
+                <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active p-3">
+                            <div class="card">
+                                <div class="row g-0">
+                                    <div class="col-md-7">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://www.youtube.com/embed/vvbA25MbIHI"
+                                                title="YouTube video" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="card-body p-4">
+                                            <h5 class="fw-bold mb-4">Can Gordon Ramsay Get His Uncle Crown Back from
+                                                Uncle Roger??</h5>
+                                            <p class="text-muted">Once given the crown of Uncle Gordon by ‪@mrnigelng‬,
+                                                Gordon is attempting to get back. This week on Scrambled, after years of
+                                                being rivals, can Gordon impress Uncle Roger to get his crown back by
+                                                making a delicious breakfast bao?</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-5">
-                                    <div class="card-body">
-                                        <h4 class="fw-bold">Nasi Lemak</h4>
-                                        <p class="text-muted">Fragrant rice cooked in coconut milk, served with sambal,
-                                            anchovies,
-                                            peanuts, and cucumber.</p>
-                                        <div>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star-half-alt text-warning"></i>
-                                            <small class="text-muted ml-2">26 Ratings</small>
+                            </div>
+                        </div>
+                        <div class="carousel-item p-3">
+                            <div class="card">
+                                <div class="row g-0">
+                                    <div class="col-md-7">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://www.youtube.com/embed/FYCoCYcuSb4"
+                                                title="YouTube video" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="card-body p-4">
+                                            <h5 class="fw-bold mb-4">BBQ Breakfast Kebabs | Jamie Oliver</h5>
+                                            <p class="text-muted">Looking for something really special this summer to
+                                                impress the ones you love, or simply looking to dust off that barbecue
+                                                and get cooking? This one's a real winner – my incredible BBQ kebabs.
+                                                Mushrooms, sausages, bacon, tomatoes, and spicy peppers... what's not to
+                                                love!?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item p-3">
+                            <div class="card">
+                                <div class="row g-0">
+                                    <div class="col-md-7">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://www.youtube.com/embed/KzL7Q2N6mCY"
+                                                title="YouTube video" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="card-body p-4">
+                                            <h5 class="fw-bold mb-4">A Day Making NYC's Most Hyped Burgers at Hamburger
+                                                America | On The Line | Bon Appétit</h5>
+                                            <p class="text-muted">“I’ve been obsessed with burgers, easily for about 25
+                                                years now. Hamburger America is the name of the documentary film I made
+                                                in 2004; I have since then written five books, I’ve had three TV shows,
+                                                and now a restaurant.” Today Bon Appétit spends a day on the line with
+                                                George Motz, burger scholar and owner of Hamburger America.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="news">
+    <!-- Topic -->
+    <section id="topics">
         <div class="jumbotron">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <h4>Cuisine</h4>
-                        <div class="card p-3 mb-3">
-                            <div class="row pb-3">
-                                <div class="col-md-9">
-                                    <a>Malaysian stocks extend sharp decline, on course for worst day in
-                                        over a
-                                        year
-                                    </a>
+                    <div class="col-md-4 p-3">
+                        <h4 class="fw-bold ms-1 mb-3">Living Related</h4>
+                        <div class="d-flex flex-column">
+                            <a href="https://www.thestar.com.my/lifestyle/living/2024/08/13/australian-celebrity-chef-shines-a-spotlight-on-malaysian-culinary-gems"
+                                target="_blank" class="card mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row mb-3">
+                                        <div class="d-flex">
+                                            <span class="h6 me-4">
+                                                Malaysian culinary gems get the spotlight in show by Australian
+                                                celebrity chef
+                                            </span>
+                                            <img src="https://apicms.thestar.com.my/uploads/images/2024/08/13/thumbs/700/2855728.webp"
+                                                class="rounded-3" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">Abirami Durai • 13 Aug 2024</small>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-                                        class="rounded-3" alt="...">
+                            </a>
+                            <a href="https://www.thestar.com.my/lifestyle/living/2024/08/09/how-to-make-ice-cubes-at-home-that-last-as-long-as-the-ones-in-bars"
+                                target="_blank" class="card mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row mb-3">
+                                        <div class="d-flex">
+                                            <span class="h6 me-4">
+                                                How to make ice cubes at home that last as long as the ones in bars
+                                            </span>
+                                            <img src="https://apicms.thestar.com.my/uploads/images/2024/08/09/thumbs/700/2849249.webp"
+                                                class="rounded-3" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">Agency • 10 Aug 2024</small>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <small class="text-muted">Malay Mail • Yesterday</small>
-                            </div>
-                        </div>
-                        <div class="card p-3 mb-3">
-                            <div class="row pb-3">
-                                <div class="col-md-9">
-                                    <a>Malaysian stocks extend sharp decline, on course for worst day in
-                                        over a
-                                        year
-                                    </a>
+                            </a>
+                            <a href="https://www.thestar.com.my/lifestyle/living/tipsy-turvy/2024/07/31/cocktail-characters-kl-bar-three-x-co039s-new-menu-celebrates-individuality"
+                                target="_blank" class="card mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row mb-3">
+                                        <div class="d-flex">
+                                            <span class="h6 me-4">
+                                                Newly ranked No. 56 in Asia, KL bar Three X Co's new menu celebrates
+                                                individuality
+                                            </span>
+                                            <img src="https://apicms.thestar.com.my/uploads/images/2024/07/31/thumbs/700/2833069.webp"
+                                                class="rounded-3" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">Michael Cheang • 31 Jul 2024</small>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-                                        class="rounded-3" alt="...">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <small class="text-muted">Malay Mail • Yesterday</small>
-                            </div>
-                        </div>
-                        <div class="card p-3 mb-3">
-                            <div class="row pb-3">
-                                <div class="col-md-9">
-                                    <a>Malaysian stocks extend sharp decline, on course for worst day in
-                                        over a
-                                        year
-                                    </a>
-                                </div>
-                                <div class="col-md-3">
-                                    <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-                                        class="rounded-3" alt="...">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <small class="text-muted">Malay Mail • Yesterday</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Cuisine</h4>
-                        <div class="card p-3 mb-3">
-                            <div class="row pb-3">
-                                <div class="col-md-9">
-                                    <a>Malaysian stocks extend sharp decline, on course for worst day in
-                                        over a
-                                        year
-                                    </a>
-                                </div>
-                                <div class="col-md-3">
-                                    <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-                                        class="rounded-3" alt="...">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <small class="text-muted">Malay Mail • Yesterday</small>
-                            </div>
-                        </div>
-                        <div class="card p-3 mb-3">
-                            <div class="row pb-3">
-                                <div class="col-md-9">
-                                    <a>Malaysian stocks extend sharp decline, on course for worst day in
-                                        over a
-                                        year
-                                    </a>
-                                </div>
-                                <div class="col-md-3">
-                                    <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-                                        class="rounded-3" alt="...">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <small class="text-muted">Malay Mail • Yesterday</small>
-                            </div>
-                        </div>
-                        <div class="card p-3 mb-3">
-                            <div class="row pb-3">
-                                <div class="col-md-9">
-                                    <a>Malaysian stocks extend sharp decline, on course for worst day in
-                                        over a
-                                        year
-                                    </a>
-                                </div>
-                                <div class="col-md-3">
-                                    <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-                                        class="rounded-3" alt="...">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <small class="text-muted">Malay Mail • Yesterday</small>
-                            </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <h4>Cuisine</h4>
-                        <div class="card p-3 mb-3">
-                            <div class="row pb-3">
-                                <div class="col-md-9">
-                                    <a>Malaysian stocks extend sharp decline, on course for worst day in
-                                        over a
-                                        year
-                                    </a>
+                    <div class="col-md-4 p-3">
+                        <h4 class="fw-bold ms-1 mb-3">Eatery Experiences</h4>
+                        <div class="d-flex flex-column">
+                            <a href="https://www.freemalaysiatoday.com/category/leisure/2024/08/14/heres-to-a-royally-good-time-at-kings-hall/"
+                                target="_blank" class="card mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row mb-3">
+                                        <div class="d-flex">
+                                            <span class="h6 me-4">
+                                                Here’s to a royally good time at Kings Hall
+                                            </span>
+                                            <img src="https://www.freemalaysiatoday.com/_next/image/?url=https%3A%2F%2Fmedia.freemalaysiatoday.com%2Fwp-content%2Fuploads%2F2024%2F08%2F851cc887-coffeeegg.webp&w=2048&q=75"
+                                                class="rounded-3" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">Sheela Vijayan • 14 Aug 2024</small>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-                                        class="rounded-3" alt="...">
+                            </a>
+                            <a href="https://www.freemalaysiatoday.com/category/leisure/2024/08/05/have-a-golden-time-enjoying-hong-kong-style-wantan-noodles/"
+                                target="_blank" class="card mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row mb-3">
+                                        <div class="d-flex">
+                                            <span class="h6 me-4">
+                                                <span>
+                                                    Have a Golden Time enjoying Hong Kong-style wantan noodles
+                                                </span>
+                                            </span>
+                                            <img src="https://media.freemalaysiatoday.com/wp-content/uploads/2024/08/64edf251-wonton.webp"
+                                                class="rounded-3" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">Terence Toh • 05 Aug 2024</small>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <small class="text-muted">Malay Mail • Yesterday</small>
-                            </div>
+                            </a>
+                            <a href="https://www.freemalaysiatoday.com/category/leisure/2024/08/04/sea-you-at-mawilla-yacht-club-restaurant-labuan-for-a-fishy-feast/"
+                                target="_blank" class="card mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row mb-3">
+                                        <div class="d-flex">
+                                            <span class="h6 me-4">
+                                                ‘Sea’ you at Mawilla Yacht Club Restaurant, Labuan for a fishy feast
+                                            </span>
+                                            <img src="https://www.freemalaysiatoday.com/_next/image/?url=https%3A%2F%2Fmedia.freemalaysiatoday.com%2Fwp-content%2Fuploads%2F2024%2F08%2Fead1a587-lifestyle-mawilla-emel-pic-030824.webp&w=2048&q=75"
+                                                class="rounded-3" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">KY Speaks • 04 Aug 2024</small>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="card p-3 mb-3">
-                            <div class="row pb-3">
-                                <div class="col-md-9">
-                                    <a>Malaysian stocks extend sharp decline, on course for worst day in
-                                        over a
-                                        year
-                                    </a>
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <h4 class="fw-bold ms-1 mb-3">Street Bites</h4>
+                        <div class="d-flex flex-column">
+                            <a href="https://www.freemalaysiatoday.com/category/leisure/2024/07/29/big-mommy-serves-great-nasi-kandar-in-puchong/"
+                                target="_blank" class="card mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row mb-3">
+                                        <div class="d-flex">
+                                            <span class="h6 me-4">
+                                                Big Mommy serves great nasi kandar in Puchong
+                                            </span>
+                                            <img src="https://www.freemalaysiatoday.com/_next/image/?url=https%3A%2F%2Fmedia.freemalaysiatoday.com%2Fwp-content%2Fuploads%2F2024%2F07%2F17800477-pair-lifestyle-emelpic-280724.webp&w=2048&q=75"
+                                                class="rounded-3" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">Noel Wong • 14 Jul 2024</small>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-                                        class="rounded-3" alt="...">
+                            </a>
+                            <a href="https://www.freemalaysiatoday.com/category/leisure/2023/03/15/5-local-street-foods-that-are-surprisingly-nutritious/"
+                                target="_blank" class="card mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row mb-3">
+                                        <div class="d-flex">
+                                            <span class="h6 me-4">
+                                                5 local street foods that are surprisingly nutritious
+                                            </span>
+                                            <img src="https://www.freemalaysiatoday.com/_next/image/?url=https%3A%2F%2Fmedia.freemalaysiatoday.com%2Fwp-content%2Fuploads%2F2023%2F03%2F1e098c36-streetfood-lifestyle-emel-pic-140323-1.jpg&w=2048&q=75"
+                                                class="rounded-3" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">Theevya Ragu • 13 Aug 2024</small>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <small class="text-muted">Malay Mail • Yesterday</small>
-                            </div>
+                            </a>
+                            <a href="https://www.freemalaysiatoday.com/category/leisure/2019/01/03/3-street-foods-that-are-perfect-with-a-chilled-tiger/"
+                                target="_blank" class="card mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row mb-3">
+                                        <div class="d-flex">
+                                            <span class="h6 me-4">
+                                                3 street foods that are perfect with a chilled Tiger
+                                            </span>
+                                            <img src="https://www.freemalaysiatoday.com/_next/image/?url=https%3A%2F%2Fmedia.freemalaysiatoday.com%2Fwp-content%2Fuploads%2F2019%2F01%2Ftiger-beer.jpg&w=2048&q=75"
+                                                class="rounded-3" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">KY Speaks • 12 Aug 2014</small>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="card p-3 mb-3">
-                            <div class="row pb-3">
-                                <div class="col-md-9">
-                                    <a>Malaysian stocks extend sharp decline, on course for worst day in
-                                        over a
-                                        year
-                                    </a>
-                                </div>
-                                <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended reading -->
+    <section id="recommended-reading">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="text-center fw-bold mb-5">Recommended Reading</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <div class="d-flex flex-column flex-md-row justify-content-between">
+                                    <div class="order-2 order-md-1 me-md-4">
+                                        <div class="d-flex flex-column justify-content-between h-100">
+                                            <div>
+                                                <h5>Ceki Penang's Recipe for Nyonya Asam Pedas Fish
+                                                </h5>
+                                                <p class="text-muted">Nyonya cuisine institution Ceki in Penang shares
+                                                    the recipe for their esteemed Asam Pedas Fish.
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <small class="text-muted">Malay Mail • 18 Jul 2024</small>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-                                        class="rounded-3" alt="...">
+                                        class="img-fluid fixed-size order-1 order-md-2 rounded-3 mb-3 mb-md-0"
+                                        alt="...">
                                 </div>
-                            </div>
-                            <div class="row">
-                                <small class="text-muted">Malay Mail • Yesterday</small>
+                                <hr>
+                                <div class="d-flex flex-column flex-md-row justify-content-between">
+                                    <div class="order-2 order-md-1 me-md-4">
+                                        <h5>Fewer data centres likely in the future</h5>
+                                        <p class="text-muted">Future data centre investments into Malaysia may cool down
+                                            once the government enforces sustainability-linked standards for local data
+                                            centres.</p>
+                                    </div>
+                                    <img src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
+                                        class="img-fluid fixed-size order-1 order-md-2 rounded-3 mb-3 mb-md-0"
+                                        alt="...">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -345,23 +434,67 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-5 pb-1 px-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 pe-5 py-3">
+                    <img src="" alt="Website Logo" class="img-fluid mb-3">
+                    <p>We are dedicated to bringing you the best content about Malaysian cuisine and culture. Explore
+                        our website for more insights and updates.</p>
+                </div>
+                <div class="col-lg-3 py-3">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-3"><a href="#" class="text-white text-decoration-none">Explore</a></li>
+                        <li class="mb-3"><a href="#" class="text-white text-decoration-none">Event</a></li>
+                        <li class="mb-3"><a href="#" class="text-white text-decoration-none">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 py-3">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Address: 123 Street, City, Country</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="icon-social-media rounded-circle text-center me-4">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="icon-social-media rounded-circle text-center me-4">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="icon-social-media rounded-circle text-center me-4">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center p-3 mt-3">
+                <p>&copy; 2024 Malaysian Cuisine The Food Paradise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <!-- Back to top button -->
     <a href="#" class="btn-go-to-top"><i class="fas fa-chevron-up"></i></a>
+
+    <!-- Bootstrap -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Animation -->
+    <script src="./assets/js/aos.js"></script>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custome JS -->
+    <script src="./assets/js/app.js"></script>
+
 </body>
-
-<!-- Bootstrap -->
-<script src="./assets/js/bootstrap.bundle.min.js"></script>
-
-<!-- Animation -->
-<script src="./assets/js/aos.js"></script>
-
-<!-- Confetti -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Custome JS -->
-<script src="./assets/js/app.js"></script>
 
 </html>
