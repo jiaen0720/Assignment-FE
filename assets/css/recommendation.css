@@ -8,14 +8,6 @@
     object-fit: cover;
 }
 
-/* .card {
-    border: none;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 0.25rem 1rem var(--color-grey);
-    transition: 0.3s ease;
-} */
-
 #weekly-leaderboard .jumbotron {
     background: linear-gradient(to bottom, var(--color-red) 50%, transparent 50%);
 }
