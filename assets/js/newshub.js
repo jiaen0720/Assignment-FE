@@ -1,9 +1,10 @@
-const apiKey = 'fd448bf94db043b48c2a3f0c228f8b0b';
+// const apiKey = 'fd448bf94db043b48c2a3f0c228f8b0b';
+const apiKey = 'dbddeef57b58421aafd6a26534fd9d8d';
 const newsContainer = document.getElementById('news-container');
 const searchInput = document.getElementById('search-input');
 const sortOrder = document.getElementById('sort-order');
 const categoryFilter = document.getElementById('category-filter');
-const languageFilter = document.getElementById('language-filter');
+// const languageFilter = document.getElementById('language-filter');
 const screenLoading = document.getElementById('screen-loading');
 const noResultsMessage = document.createElement('div');
 
@@ -13,8 +14,9 @@ noResultsMessage.innerHTML = '<p>No results found.</p>';
 let allNews = [];
 async function fetchNews() {
     try {
-        const language = languageFilter.value;
-        const response = await fetch(`https://newsapi.org/v2/everything?apiKey=${apiKey}&q=Malaysian+cuisine+OR+Malaysian+restaurant+OR+Malaysian+food&language=${language}&pageSize=100`);
+        // const language = languageFilter.value;
+        // const response = await fetch(`https://newsapi.org/v2/everything?apiKey=${apiKey}&q=Malaysian+cuisine+OR+Malaysian+restaurant+OR+Malaysian+food&language=${language}&pageSize=100`);
+        const response =  await fetch('./assets/data/newsapi.json');
 
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -122,5 +124,5 @@ function formatPublishedDate(dateString) {
 searchInput.addEventListener('input', filterNews);
 sortOrder.addEventListener('change', filterNews);
 categoryFilter.addEventListener('change', filterNews);
-languageFilter.addEventListener('change', fetchNews);
+// languageFilter.addEventListener('change', fetchNews);
 document.addEventListener('DOMContentLoaded', fetchNews)
