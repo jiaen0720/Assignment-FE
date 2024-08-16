@@ -1,95 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Video Slider</title>
-    <!-- Bootstrap CSS -->
+    <title>Malaysian Food News</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
-        .carousel-control-prev,
-        .carousel-control-next {
-            background-color: rgba(0,0,0,0.5);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
+        body {
+            background-image: url('https://example.com/path/to/your/background-image.jpg');
+            background-size: cover;
+            background-attachment: fixed;
         }
-        .carousel-control-prev {
-            left: -60px;
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
         }
-        .carousel-control-next {
-            right: -60px;
+
+        .news-card {
+            transition: all 0.3s ease;
         }
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            width: 24px;
-            height: 24px;
-        }
-        #videoCarousel {
-            max-width: 900px;
-            margin: 0 auto;
+
+        .news-card.filtered-out {
+            opacity: 3;
+            transform: scale(0.8);
         }
     </style>
 </head>
+
 <body>
-    <div class="container mt-5">
-        <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Video 1 -->
-                <div class="carousel-item active">
-                    <div class="card">
-                        <div class="row g-0">
-                            <div class="col-md-6">
-                                <div class="ratio ratio-16x9">
-                                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video 1" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card-body">
-                                    <h5 class="card-title">Video 1 Title</h5>
-                                    <p class="card-text">Description for Video 1. Add details about the content here.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video 2 -->
-                <div class="carousel-item">
-                    <div class="card">
-                        <div class="row g-0">
-                            <div class="col-md-6">
-                                <div class="ratio ratio-16x9">
-                                    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video 2" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card-body">
-                                    <h5 class="card-title">Video 2 Title</h5>
-                                    <p class="card-text">Description for Video 2. Add details about the content here.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>      
-            </div>
-            
-            <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <div class="loading-screen">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Malaysian Food News</h1>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search news...">
+            </div>
+            <div class="col-md-3">
+                <select id="sortOrder" class="form-select">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="categoryFilter" class="form-select">
+                    <option value="all">All Categories</option>
+                    <option value="cuisine">Cuisine</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="food">Food</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="newsContainer" class="row"></div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        const apiKey = 'fd448bf94db043b48c2a3f0c228f8b0b';
+        const newsContainer = document.getElementById('newsContainer');
+        const searchInput = document.getElementById('searchInput');
+        const sortOrder = document.getElementById('sortOrder');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const loadingScreen = document.querySelector('.loading-screen');
+
+        let allNews = [];
+
+        async function fetchNews() {
+            try {
+                const response = await axios.get(`https://newsapi.org/v2/everything`, {
+                    params: {
+                        apiKey: apiKey,
+                        q: 'Malaysian cuisine OR Malaysian restaurant OR Malaysian food',
+                        language: 'en',
+                        pageSize: 100
+                    }
+                });
+
+                allNews = response.data.articles.filter(article =>
+                    article.title && article.description && article.url && article.urlToImage && article.publishedAt
+                );
+
+                displayNews(allNews);
+            } catch (error) {
+                console.error('Error fetching news:', error);
+            } finally {
+                loadingScreen.style.display = 'none';
+            }
+        }
+
+        function displayNews(news) {
+            newsContainer.innerHTML = '';
+            news.forEach(article => {
+                const card = createNewsCard(article);
+                newsContainer.appendChild(card);
+            });
+        }
+
+        function createNewsCard(article) {
+            const card = document.createElement('div');
+            card.className = 'col-md-4 mb-4 news-card';
+            card.innerHTML = `
+            <div class="card h-100">
+                <img src="${article.urlToImage || 'https://via.placeholder.com/300x200'}" class="card-img-top" alt="${article.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${article.title}</h5>
+                    <p class="card-text">${article.description}</p>
+                    <a href="${article.url}" target="_blank" class="btn btn-primary">Read More</a>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">${new Date(article.publishedAt).toLocaleString()}</small>
+                </div>
+            </div>`;
+            return card;
+        }
+
+        function filterNews() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const category = categoryFilter.value;
+            const sortByDate = sortOrder.value;
+
+            let filteredNews = allNews.filter(article => {
+                const matchesSearch = article.title.toLowerCase().includes(searchTerm) ||
+                    article.description.toLowerCase().includes(searchTerm);
+                const matchesCategory = category === 'all' || article.title.toLowerCase().includes(category);
+                return matchesSearch && matchesCategory;
+            });
+
+            if (sortByDate === 'newest') {
+                filteredNews.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+            } else {
+                filteredNews.sort((a, b) => new Date(a.publishedAt) - new Date(b.publishedAt));
+            }
+
+            animateNewsCards(filteredNews);
+        }
+
+        function animateNewsCards(filteredNews) {
+            const cards = document.querySelectorAll('.news-card');
+            cards.forEach(card => {
+                card.classList.add('filtered-out');
+            });
+
+            setTimeout(() => {
+                displayNews(filteredNews);
+                setTimeout(() => {
+                    const newCards = document.querySelectorAll('.news-card');
+                    newCards.forEach(card => {
+                        card.classList.remove('filtered-out');
+                    });
+                }, 50);
+            }, 300);
+        }
+
+        searchInput.addEventListener('input', filterNews);
+        sortOrder.addEventListener('change', filterNews);
+        categoryFilter.addEventListener('change', filterNews);
+
+        fetchNews();
+    </script>
 </body>
+
 </html>
