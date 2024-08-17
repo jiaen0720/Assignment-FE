@@ -1,0 +1,9 @@
+@media (min-width: 992px) {
+
+    .navbar .navbar-nav .nav-item a:hover,
+    .navbar .navbar-nav .nav-item a.active {
+        color: var(--color-red);
+        border-bottom: 0.1875rem solid var(--color-red);
+        transition: border-bottom 0.3s ease, color 0.3s ease;
+    }
+}

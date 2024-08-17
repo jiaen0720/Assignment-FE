@@ -1,3 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --font-base: "Poppins";
+    --color-black: #31303a;
+    --color-white: #fefefe;
+    --color-snow: #fffafa;
+    --color-bronze: #cd7f32;
+    --color-gold: #ffd700;
+    --color-silver: #b0abab;
+    --color-purple: #7d2ae8;
+    --color-red: #c21807;
+    --color-yellow: #ffc107;
+    --color-grey: #cccccc;
+    --color-light-grey: #f5f5f5;
+}
+
+/* :root {
+    --font-base: "Poppins";
+    --color-black: #151618;
+    --color-gray: #899499;
+    --color-purple: #702963;
+    --color-red: #C21807;
+    --color-yellow: #ffd700;
+    --color-green: #2f452d;
+    --color-white: #fafafa;
+    --color-blue: #4169E1;
+} */
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* body {
+    font-family: 'Poppins', medium;
+    background-color: var(--color-white);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+} */
+
 .navbar {
     transition: background-color 0.3s ease;
     font-weight: 580;
@@ -34,18 +81,18 @@
     background-color: var(--color-light-grey);
 }
 
-footer p{
+footer p {
     color: var(--color-white);
 }
 
-footer a{
+footer a {
     color: var(--color-white);
     text-decoration: none;
     transition: color 0.2s ease-in-out;
 }
 
-footer ul li:hover a{
-    color:var(--color-red) !important;
+footer ul li:hover a {
+    color: var(--color-red) !important;
 }
 
 .btn-contact-us {
@@ -129,14 +176,4 @@ footer ul li:hover a{
     background-color: var(--color-red);
     border-color: var(--color-red);
     transition: 0.3s ease;
-}
-
-@media (min-width: 992px) {
-
-    .navbar .navbar-nav .nav-item a:hover,
-    .navbar .navbar-nav .nav-item a.active {
-        color: var(--color-red);
-        border-bottom: 0.1875rem solid var(--color-red);
-        transition: border-bottom 0.3s ease, color 0.3s ease;
-    }
 }

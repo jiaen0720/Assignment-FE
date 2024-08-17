@@ -1,6 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --font-base: "Poppins";
+    --color-black: #31303a;
+    --color-white: #fefefe;
+    --color-snow: #fffafa;
+    --color-bronze: #cd7f32;
+    --color-gold: #ffd700;
+    --color-silver: #b0abab;
+    --color-purple: #7d2ae8;
+    --color-red: #c21807;
+    --color-yellow: #ffc107;
+    --color-grey: #cccccc;
+    --color-light-grey: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: var(--font-base), sans-serif;
+}
+
+body {
+    background-color: var(--color-white);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    word-break: break-word;
+    color: var(--color-red);
+}
+
+.jumbotron {
+    padding: 6rem 1rem;
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 1rem var(--color-grey);
+    transition: 0.3s ease;
+}
+
 #hero .jumbotron,
 #popular-malaysian-dishes .jumbotron,
-#featured-news .jumbotron,
 #recommended-restaurant .jumbotron {
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
@@ -144,32 +197,4 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-@media (min-width: 992px) {
-    .top-1 {
-        transform: translateY(-2rem);
-    }
-}
-
-@media (min-width: 993px) {
-    #featured-news .card img {
-        width: 100%;
-        height: 30rem;
-        object-fit: cover;
-    }
-}
-
-@keyframes click-animation {
-    0% {
-        transform: scale(0.9);
-    }
-
-    50% {
-        transform: scale(1.6);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }

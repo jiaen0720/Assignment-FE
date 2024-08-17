@@ -4,7 +4,7 @@
     --font-base: "Poppins";
     --color-black: #31303a;
     --color-white: #fefefe;
-    
+    --color-snow: #fffafa;
     --color-bronze: #cd7f32;
     --color-gold: #ffd700;
     --color-silver: #b0abab;
@@ -38,16 +38,40 @@ img {
 h1 {
     word-break: break-word;
     color: var(--color-red);
+
 }
 
 .jumbotron {
-    padding: 6rem 3rem;
+    padding: 5rem 0rem;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+    object-fit: cover;
+}
+
+.border {
+    opacity: 1;
+    width: 6rem;
+    height: 0.7rem;
+    background-color: var(--color-red);
+}
+
+.accordion-button {
+    border: 0.0625rem solid var(--color-red);
+    height: 4.5rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-snow);
+}
+
+.accordion-button.collapsed {
+    background-color: var(--color-snow);
 }
 
 .card {
-    border: none;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 0.25rem 1rem var(--color-grey);
-    transition: 0.3s ease;
+    border: 0.0625rem solid var(--color-red);
+    background-color: var(--color-snow);
 }

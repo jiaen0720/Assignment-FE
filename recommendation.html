@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
     <title>Recommendation</title>
 
     <!-- Bootstrap -->
@@ -15,14 +16,13 @@
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="./assets/css/all.min.css">
 
-    <!-- Initialization -->
-    <link rel="stylesheet" href="./assets/css/initialization.css">
-
-    <!-- Layout -->
-    <link rel="stylesheet" href="./assets/css/layout.css">
+    <!-- Common -->
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/common-media-queries.css">
 
     <!-- Custom -->
     <link rel="stylesheet" href="./assets/css/recommendation.css">
+    <link rel="stylesheet" href="./assets/css/recommendation-media-queries.css">
 </head>
 
 <body>
@@ -34,7 +34,8 @@
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand d-flex mx-3" href="#">
+                <a class="navbar-brand d-flex mx-3 align-items-center" href="index.html">
+                    <img src="./assets/images/logo.png" alt="Logo" class="me-2">
                     <div class="d-flex flex-column lh-1">
                         <p class="mb-0">Malaysian Cuisine</p>
                         <p class="mb-0 fs-6 fw-light">The Food Paradise</p>
@@ -58,18 +59,28 @@
                         <li class="nav-item">
                             <a class="nav-link mx-2" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Explore</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Explore</a>
+                            <ul class="dropdown-menu shadow-sm">
+                                <li><a class="dropdown-item border-0" href="penisular.html">Peninsular</a></li>
+                                <li><a class="dropdown-item border-0" href="borneo.html">Borneo</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Events</a>
+                            <a class="nav-link mx-2" href="recommendation.html">Recommendation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">About</a>
+                            <a class="nav-link mx-2" href="news-flash.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="about-us.html">About</a>
                         </li>
                     </ul>
                     <div class="d-flex justify-content-start align-items-center mx-2 mt-3 mt-lg-0 ">
-                        <button type="button" class="btn-contact-us">Contact us</button>
+                        <a href="contact-us.html" class="btn-link">
+                            <button type="button" class="btn-contact-us">Contact Us</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -400,33 +411,51 @@
     <footer class="bg-black text-white pt-5 pb-1 px-3">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 pe-5 py-3">
-                    <img src="" alt="Website Logo" class="img-fluid mb-3">
-                    <p>We are dedicated to bringing you the best content about Malaysian cuisine and culture. Explore
-                        our website for more insights and updates.</p>
+                <div class="col-lg-7 py-3">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="me-5">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/images/logo.png" alt="Logo" class="mb-3"
+                                    style="width: 100%; max-width: 144px;">
+                                <div class="d-flex flex-column lh-1">
+                                    <h3 class="mb-1">Malaysian Cuisine</h3>
+                                    <p>The Food Paradise</p>
+                                </div>
+                            </div>
+                            <p>
+                                We are dedicated to bringing you the best content about Malaysian cuisine and
+                                culture. Explore
+                                our website for more insights and updates.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-3 py-3">
+                <div class="col-lg-2 py-3">
                     <h5 class="mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li class="mb-3"><a href="#" class="text-white text-decoration-none">Explore</a></li>
-                        <li class="mb-3"><a href="#" class="text-white text-decoration-none">Event</a></li>
-                        <li class="mb-3"><a href="#" class="text-white text-decoration-none">About</a></li>
+                        <li class="mb-3"><a href="index.html">Home</a></li>
+                        <li class="mb-3"><a href="penisular.html">Peninsular</a></li>
+                        <li class="mb-3"><a href="borneo.html">Borneo</a></li>
+                        <li class="mb-3"><a href="news-flash.html">News</a></li>
+                        <li class="mb-3"><a href="about-us.html">About</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 py-3">
                     <h5 class="mb-4">Contact Us</h5>
-                    <p>Email: info@example.com</p>
-                    <p>Phone: +123 456 7890</p>
-                    <p>Address: 123 Street, City, Country</p>
+                    <p>Email: jimmy@1utar.my</p>
+                    <p>Phone: +60 12-345 6789</p>
+                    <p>Address: No 1, Jalan Universiti, 31900 Kampar, Perak</p>
                     <div class="d-flex mt-4">
-                        <a href="#" class="icon-social-media rounded-circle text-center me-4">
+                        <a href="https://www.facebook.com/UTARnet" target="_blank"
+                            class="icon-social-media rounded-circle text-center me-4">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="icon-social-media rounded-circle text-center me-4">
+                        <a href="https://www.instagram.com/utardsakampar/" target="_blank"
+                            class="icon-social-media rounded-circle text-center me-4">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="icon-social-media rounded-circle text-center me-4">
+                        <a href="https://x.com/UTARnet" target="_blank"
+                            class="icon-social-media rounded-circle text-center me-4">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
@@ -451,8 +480,8 @@
     <!-- Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
-    <!-- Layout -->
-    <script src="./assets/js/layout.js"></script>
+    <!-- Common -->
+    <script src="./assets/js/common.js"></script>
 
     <!-- Custome -->
     <script src="./assets/js/recommendation.js"></script>

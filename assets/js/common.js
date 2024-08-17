@@ -24,8 +24,3 @@ window.addEventListener('scroll', () => {
 
     }
 });
-
-// AOS init
-AOS.init({
-    duration: 700
-});
