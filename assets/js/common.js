@@ -17,10 +17,21 @@ const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
         navbar.classList.add('shadow-sm');
-        navbar.classList.replace('bg-transparent', 'bg-white');
+
+        // Check if the navbar has a dark background
+        if (navbar.classList.contains('navbar-dark')) {
+            navbar.classList.replace('bg-transparent', 'bg-black');
+        } else {
+            navbar.classList.replace('bg-transparent', 'bg-white');
+        }
     } else {
         navbar.classList.remove('shadow-sm');
-        navbar.classList.replace('bg-white', 'bg-transparent');
 
+        // Revert to transparent background based on dark or light theme
+        if (navbar.classList.contains('navbar-dark')) {
+            navbar.classList.replace('bg-black', 'bg-transparent');
+        } else {
+            navbar.classList.replace('bg-white', 'bg-transparent');
+        }
     }
 });
