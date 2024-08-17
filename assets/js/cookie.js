@@ -21,6 +21,22 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
+// Select the "favorite"  buttons
+const favoriteButtons = document.querySelectorAll('.btn-favorite');
+
+// Function to show clicked effect
+favoriteButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Add the 'clicked' class to trigger the animation on the clicked button
+        button.classList.add('clicked');
+
+        // Remove the 'clicked' class after the animation is done
+        setTimeout(() => {
+            button.classList.remove('clicked');
+        }, 300); // Match the duration of the animation
+    });
+});
+
 // Function to toggle favorite status
 function toggleFavorite(id, category, imgSrc, title, location) {
     let favorites = getCookie("favorites");
@@ -46,7 +62,7 @@ function updateFavoriteButtons() {
     let favorites = getCookie("favorites");
     favorites = favorites ? JSON.parse(decodeURIComponent(favorites)) : [];
     
-    document.querySelectorAll('.favorite-btn').forEach(button => {
+    document.querySelectorAll('.btn-favorite').forEach(button => {
         let id = parseInt(button.getAttribute('onclick').match(/\d+/)[0]);
         if (favorites.some(fav => fav.id === id)) {
             button.classList.add('favorited');

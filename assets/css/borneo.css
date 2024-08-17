@@ -5,14 +5,7 @@
 }
 
 #sabah-sarawak-carousel {
-	left: 27%;
-	top: 10%;
 	z-index: 99;
-}
-
-#hero .carousel-item {
-	width: 375px;
-	height: fit-content;
 }
 
 #sabah-sarawak-carousel img {
@@ -40,6 +33,8 @@
 }
 
 .borneo-title .desktop-hero h1:nth-child(4) {
+	position: relative;
+	z-index: 100;
 	color: var(--color-white);
 	transform: translateX(11rem);
 }
@@ -61,158 +56,6 @@
 }
 
 .blackbar {
-	height: 150px;
 	bottom: 0;
 	border: 2px solid black;
-}
-
-/* Food showcase */
-#food-showcase {
-	min-height: 100vh;
-	height: auto;
-	background-image: linear-gradient(rgba(255, 255, 255, 0.9),
-			rgba(255, 255, 255, 0.9)),
-		url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
-}
-
-#food-showcase p {
-	color: var(--color-gray);
-}
-
-/* Filter bar */
-.menu {
-	border-bottom: 1px solid var(--color-black);
-	padding: 2px 0;
-	margin-bottom: 10px;
-}
-
-.menu ul {
-	list-style-type: none;
-}
-
-.menu li {
-	text-decoration: none;
-	color: var(--color-black);
-	margin: 0 10px;
-	font-weight: bold;
-	transition: color .2s ease-in-out;
-	width: auto;
-}
-
-.menu a {
-	text-decoration: none;
-	color: var(--color-black);
-	transition: color 0.2s ease-in-out;
-}
-
-.menu a:hover {
-	color: var(--color-red);
-}
-
-.category {
-	font-weight: bold;
-}
-
-.card {
-	transition: box-shadow 0.2s ease-in-out;
-	overflow: hidden;
-}
-
-.card .img-holder {
-	overflow: hidden;
-}
-
-.card .img-holder img {
-	width: 100%;
-	height: 12.5rem;
-	object-fit: cover;
-	transform: scale(1.3);
-	transition: all 0.2s ease-in-out;
-}
-
-.card:hover {
-	box-shadow: 5px 5px 40px var(--color-black);
-}
-
-.card:hover img {
-	transform: scale(1);
-}
-
-/* Popups */
-.overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 9998;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.food-card {
-	display: none;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	animation-name: popup;
-	animation-duration: 0.2s;
-	width: 750px;
-	height: 800px;
-	border-radius: 16px;
-	z-index: 9999;
-}
-
-.food-card.visible {
-	display: block;
-}
-
-.food-image img {
-	max-height: 400px;
-	width: 750px;
-	object-fit: cover;
-}
-
-.food-image h1 {
-	position: absolute;
-	bottom: 0;
-	color: white;
-	height: fit-content;
-}
-
-.food-info {
-	padding: 1rem 2rem 2rem 2rem;
-	height: auto;
-}
-
-.food-description,
-.food-allergies,
-.food-nutrition {
-	height: fit-content;
-	border-bottom: 1px solid black;
-	padding: 1rem;
-}
-
-.food-info h2 {
-	margin-bottom: 1rem;
-}
-
-.food-info p {
-	line-height: 1.5rem;
-}
-
-.allergens-list {
-	display: flex;
-	list-style-type: none;
-}
-
-.allergens-list li {
-	margin-right: 2rem;
-}
-
-@keyframes popup {
-	from {
-		transform: translate(50%, -50%);
-	}
 }

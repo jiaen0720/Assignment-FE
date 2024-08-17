@@ -1,16 +1,21 @@
 function loadFavorites() {
     let favorites = getCookie("favorites");
     let favoritesRow = document.getElementById("favorites-row");
-    favoritesRow.innerHTML = ''; // Clear existing content
+
+    // Clear existing content
+    favoritesRow.innerHTML = '';
 
     if (favorites) {
-        console.log("Favorites JSON String:", favorites); // Debugging line
+        // Debugging line
+        console.log("Favorites JSON String:", favorites);
+
         try {
             favorites = JSON.parse(decodeURIComponent(favorites));
         } catch (e) {
             console.error("Error parsing JSON:", e);
             return;
         }
+
         // Sort by newest first
         favorites.sort((a, b) => b.id - a.id);
 
@@ -20,6 +25,7 @@ function loadFavorites() {
         }
 
         let row;
+        
         favorites.forEach((recipe, index) => {
             if (index % 3 === 0) {
                 row = document.createElement('div');
@@ -33,7 +39,9 @@ function loadFavorites() {
                 <div class="card food-item rounded" data-id="${recipe.id}" data-category="${recipe.category}">
                     <div class="position-relative img-holder">
                         <img src="${recipe.imgSrc}" class="card-img-top" alt="${recipe.title}">
-                        <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite(${recipe.id})"></button>
+                        <button class="btn-favorite" onclick="event.stopPropagation(); toggleFavorite(${recipe.id})">
+                            <i class="fas fa-heart"></i>
+                        </button>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title fs-3">${recipe.title}</h5>
@@ -45,7 +53,7 @@ function loadFavorites() {
         });
 
         document.querySelectorAll('.food-item').forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 const foodId = this.getAttribute('data-id');
                 const data = foodData[foodId];
                 createPopup(data);
@@ -59,7 +67,7 @@ function loadFavorites() {
 // Function to display empty message
 function displayEmptyMessage(container) {
     let message = document.createElement('h2');
-    message.className = 'empty-fav';
+    message.className = 'empty-container mt-4';
     message.textContent = 'Favorites Is Empty';
     container.appendChild(message);
 }

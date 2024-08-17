@@ -2,10 +2,11 @@
 <html>
 
 <head lang="en">
-    <title>Favorite Recipes</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <title>Favorite Recipes</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -21,16 +22,17 @@
     <link rel="stylesheet" href="assets/css/common-media-queries.css" />
 
     <!-- Personal -->
+    <link rel="stylesheet" href="assets/css/malaysia-regions.css" />
     <link rel="stylesheet" href="assets/css/borneo.css" />
     <link rel="stylesheet" href="assets/css/borneo-media-queries.css" />
 
-    <link rel="stylesheet" href="assets/css/fav.css" />
-    <link rel="stylesheet" href="assets/css/fav-media-queries.css" />
+    <link rel="stylesheet" href="assets/css/favorite.css" />
+    <link rel="stylesheet" href="assets/css/favorite-media-queries.css" />
 </head>
 
 <body>
     <!-- nagivation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
         <div class="container">
             <div class="d-flex">
                 <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
@@ -92,17 +94,18 @@
 
     <!--Content-->
     <section class="content">
-        <div class="container page-title">
-            <h1>My Favourite</h1>
-        </div>
-        <div class="food-in">
-            <div id="food-container" class="container">
-                <div class="row" id="favorites-row">
-                    <!--  Fav Appear Here  -->
+        <div class="jumbotron">
+            <h1 class="fw-bold text-center mt-5">My Favourite</h1>
+            <div class="food-in">
+                <div id="food-container" class="container">
+                    <div class="row" id="favorites-row">
+                        <!--  Fav Appear Here  -->
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="bg-black text-white pt-5 pb-1 px-3">
         <div class="container">
@@ -175,11 +178,13 @@
     <!-- Animate on Scroll -->
     <script src="assets/js/aos.js"></script>
 
-    <!-- Custom -->
-    <script src="assets/js/malaysia-food.js"></script>
-    <script src="assets/js/borneo.js"></script>
-    <script src="assets/js/fav.js"></script>
+    <!-- Common -->
     <script src="assets/js/common.js"></script>
+
+    <!-- Personal -->
+    <script src="assets/js/malaysia-food.js"></script>
+    <script src="assets/js/malaysia-regions.js"></script>
+    <script src="assets/js/favorite.js"></script>
     <script src="assets/js/cookie.js"></script>
 
     <script>

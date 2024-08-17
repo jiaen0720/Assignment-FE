@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
-    <title>Borneo Food</title>
+    <title>Borneo Malaysia</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/common-media-queries.css" />
 
     <!-- Personal -->
+    <link rel="stylesheet" href="assets/css/malaysia-regions.css" />
+    <link rel="stylesheet" href="assets/css/malaysia-regions-media-queries.css" />
     <link rel="stylesheet" href="assets/css/borneo.css" />
     <link rel="stylesheet" href="assets/css/borneo-media-queries.css" />
 </head>
@@ -90,7 +92,7 @@
 
     <!-- Hero section -->
     <section id="hero">
-        <div class="jumbotron d-flex position-relative h-100">
+        <div class="jumbotron d-flex position-relative h-100 justify-content-center">
             <div id="sabah-sarawak-carousel" class="carousel slide position-absolute rounded" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -125,7 +127,7 @@
                         <img src="assets/images/hornbill.jpg" class="d-block w-100" alt="Rafflesia"
                             data-bs-interval="1000">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="text-white fs-1">Rhinocerous Hornbill</h5>
+                            <h5 class="text-white fs-2">Rhinocerous Hornbill</h5>
                         </div>
                     </div>
                 </div>
@@ -160,7 +162,7 @@
             <div class="blackbar bg-black position-absolute w-100"></div>
         </div>
     </section>
-    
+
     <!-- Food Cards -->
     <section id="food-showcase">
         <div class="jumbotron pt-5 h-100 pb-5">
@@ -180,8 +182,10 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item rounded" data-id="1" data-category="rice">
                             <div class="position-relative img-holder">
-                                <img src="https://www.andy-cooks.com/cdn/shop/articles/20231116072724-c2-a9andy_cooks_thumbnails_nasi_lemak_01.jpg?v=1700389619&width=1600"
-                                    class="card-img-top" alt="Nasi Lemak">
+                                <img src="assets/images/nasi-lemak.jpg" class="card-img-top" alt="Nasi Lemak">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(1, 'rice', 'assets/images/nasi-lemak.jpg', 'Nasi Lemak', 'Malaysia')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Nasi Lemak</h5>
@@ -193,6 +197,9 @@
                         <div class="card food-item rounded" data-id="2" data-category="rice">
                             <div class="position-relative img-holder">
                                 <img src="assets/images/nasi-linou.jpg" class="card-img-top" alt="Nasi Linou">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(2, 'rice', 'assets/images/nasi-linou.jpg', 'Nasi Linou', 'Kadazan-Dusun')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Nasi Linou</h5>
@@ -203,7 +210,10 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="11" data-category="snack">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/penyaram.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/penyaram.jpg" class="card-img-top" alt="Penyaram">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(11, 'snack', 'assets/images/penyaram.jpg', 'Penyaram', 'Sabah')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Penyaram</h5>
@@ -216,7 +226,10 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="4" data-category="rice">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/nasi-ulam.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/nasi-ulam.jpg" class="card-img-top" alt="Nasi Ulam">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(4, 'rice', 'assets/images/nasi-ulam.jpg', 'Nasi Ulam', 'Brunei')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Nasi Ulam</h5>
@@ -227,18 +240,24 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="5" data-category="rice">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/lun-bawang.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/lun-bawang.jpg" class="card-img-top" alt="Nuba Laya">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(5, 'rice', 'assets/images/lun-bawang.jpg', 'Nuba Laya', 'Lun Bawang, Sarawak')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Nuba Laya</h5>
-                                <p class="card-text fs-6">Lun Bawang from Sarawak</p>
+                                <p class="card-text fs-6">Lun Bawang, Sarawak</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="7" data-category="noodle">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/sarawak-laksa.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/sarawak-laksa.jpg" class="card-img-top" alt="Sarawak Laksa">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(7, 'noodle', 'assets/images/sarawak-laksa.jpg', 'Sarawak Laksa', 'Sarawak')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Sarawak Laksa</h5>
@@ -251,7 +270,10 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="6" data-category="rice">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/lemang.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/lemang.jpg" class="card-img-top" alt="Lemang">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(6, 'rice', 'assets/images/lemang.jpg', 'Lemang', 'Sarawak')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Lemang</h5>
@@ -262,7 +284,11 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="8" data-category="noodle">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/mee-goreng-basah.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/mee-goreng-basah.jpg" class="card-img-top"
+                                    alt="Mee Goreng Basah">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(8, 'noodle', 'assets/images/mee-goreng-basah.jpg', 'Mee Goreng Basah', 'Sarawak')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Mee Goreng Basah</h5>
@@ -273,7 +299,10 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="9" data-category="noodle">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/tuaran-mee.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/tuaran-mee.jpg" class="card-img-top" alt="Tuaran Mee">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(9, 'noodle', 'assets/images/tuaran-mee.jpg', 'Tuaran Mee', 'Tuaran, Sabah')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Tuaran Mee</h5>
@@ -286,7 +315,10 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="10" data-category="snack">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/kuih-cincin.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/kuih-cincin.jpg" class="card-img-top" alt="Kuih Cincin">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(10, 'snack', 'assets/images/kuih-cincin.jpg', 'Kuih Cincin', 'Sabah')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Kuih Cincin</h5>
@@ -297,7 +329,10 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="3" data-category="rice">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/nasi-tumpang.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/nasi-tumpang.jpg" class="card-img-top" alt="Nasi Tumpang">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(3, 'rice', 'assets/images/nasi-tumpang.jpg', 'Nasi Tumpang', 'Bajau')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Nasi Tumpang</h5>
@@ -308,7 +343,10 @@
                     <div class="col-lg-4 p-3">
                         <div class="card food-item" data-id="12" data-category="snack">
                             <div class="position-relative img-holder">
-                                <img src="assets/images/kek-lapis.jpg" class="card-img-top" alt="...">
+                                <img src="assets/images/kek-lapis.jpg" class="card-img-top" alt="Kek Lapis">
+                                <button class="btn-favorite"
+                                    onclick="event.stopPropagation(); toggleFavorite(12, 'snack', 'assets/images/kek-lapis.jpg', 'Kek Lapis', 'Sarawak')"><i
+                                        class="fas fa-heart"></i></button>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Kek Lapis</h5>
@@ -320,7 +358,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="bg-black text-white pt-5 pb-1 px-3">
         <div class="container">
@@ -399,6 +437,7 @@
     <!-- Personal -->
     <script src="assets/js/malaysia-food.js"></script>
     <script src="assets/js/malaysia-regions.js"></script>
+    <script src="assets/js/cookie.js"></script>
 
     <script>
         AOS.init({ disable: window.innerWidth < 768 });
