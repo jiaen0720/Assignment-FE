@@ -1,155 +1,155 @@
 /* Hero section */
-#hero{
-    background-color: var(--color-green);
-    height: 75vh;
+#hero {
+	background-color: var(--color-green);
+	height: 75vh;
 }
 
-#sabah-sarawak-carousel{
-	left:27%;
-	top:10%;
+#sabah-sarawak-carousel {
+	left: 27%;
+	top: 10%;
 	z-index: 99;
 }
 
-#hero .carousel-item{
+#hero .carousel-item {
 	width: 375px;
 	height: fit-content;
 }
 
-#sabah-sarawak-carousel img{
+#sabah-sarawak-carousel img {
 	object-fit: fill;
 }
 
-.borneo-title{
+.borneo-title {
 	width: fit-content;
-	height:fit-content;
+	height: fit-content;
 }
 
-.borneo-title .desktop-hero h1{
-    color: var(--color-yellow);
-    font-size: 6rem;
+.borneo-title .desktop-hero h1 {
+	color: var(--color-yellow);
+	font-size: 6rem;
 }
 
-.borneo-title .desktop-hero .sabah:first-of-type{
+.borneo-title .desktop-hero .sabah:first-of-type {
 	position: relative;
 	z-index: 100;
 }
 
-.borneo-title .desktop-hero h1:nth-child(2){
-    color:var(--color-white);
-    transform: translateX(15rem);
+.borneo-title .desktop-hero h1:nth-child(2) {
+	color: var(--color-white);
+	transform: translateX(15rem);
 }
 
-.borneo-title .desktop-hero h1:nth-child(4){
-    color:var(--color-white);
-    transform: translateX(11rem);
+.borneo-title .desktop-hero h1:nth-child(4) {
+	color: var(--color-white);
+	transform: translateX(11rem);
 }
 
-.borneo-title .mobile-hero .sarawak{
-		color: var(--color-yellow);
+.borneo-title .mobile-hero .sarawak {
+	color: var(--color-yellow);
 }
 
-.borneo-title .mobile-hero .sabah{
+.borneo-title .mobile-hero .sabah {
 	color: var(--color-white);
 }
 
-.mobile-hero{
+.mobile-hero {
 	display: none;
 }
 
-.desktop-hero{
+.desktop-hero {
 	width: fit-content;
 }
 
-.blackbar{
-    height:150px;
+.blackbar {
+	height: 150px;
 	bottom: 0;
-	border:2px solid black;
+	border: 2px solid black;
 }
 
 /* Food showcase */
-#food-showcase{
-    min-height: 100vh;
+#food-showcase {
+	min-height: 100vh;
 	height: auto;
 	background-image: linear-gradient(rgba(255, 255, 255, 0.9),
-	 rgba(255, 255, 255, 0.9)), 
-	 url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+			rgba(255, 255, 255, 0.9)),
+		url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
 }
 
-#food-showcase p{
+#food-showcase p {
 	color: var(--color-gray);
 }
 
 /* Filter bar */
-.menu{
-    border-bottom: 1px solid var(--color-black);
-    padding: 2px 0;
-    margin-bottom: 10px;
+.menu {
+	border-bottom: 1px solid var(--color-black);
+	padding: 2px 0;
+	margin-bottom: 10px;
 }
 
-.menu ul{
-    list-style-type: none;
+.menu ul {
+	list-style-type: none;
 }
 
-.menu li{
-    text-decoration: none;
-    color: var(--color-black);
-    margin: 0 10px;
-    font-weight: bold;
+.menu li {
+	text-decoration: none;
+	color: var(--color-black);
+	margin: 0 10px;
+	font-weight: bold;
 	transition: color .2s ease-in-out;
 	width: auto;
 }
 
-.menu a{
+.menu a {
 	text-decoration: none;
-	color:var(--color-black);
+	color: var(--color-black);
 	transition: color 0.2s ease-in-out;
 }
 
-.menu a:hover{
-    color: var(--color-red);
+.menu a:hover {
+	color: var(--color-red);
 }
 
-.category{
+.category {
 	font-weight: bold;
 }
 
-.card{
+.card {
 	transition: box-shadow 0.2s ease-in-out;
 	overflow: hidden;
 }
 
-.card .img-holder{
+.card .img-holder {
 	overflow: hidden;
 }
 
-.card .img-holder img{
+.card .img-holder img {
 	width: 100%;
-	height:12.5rem; 
+	height: 12.5rem;
 	object-fit: cover;
 	transform: scale(1.3);
 	transition: all 0.2s ease-in-out;
-} 
+}
 
-.card:hover{
+.card:hover {
 	box-shadow: 5px 5px 40px var(--color-black);
 }
 
-.card:hover img{
+.card:hover img {
 	transform: scale(1);
 }
 
 /* Popups */
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	z-index: 9998;
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-.food-card{
+.food-card {
 	display: none;
 	position: fixed;
 	top: 50%;
@@ -170,44 +170,44 @@
 
 .food-image img {
 	max-height: 400px;
-	width:750px;
+	width: 750px;
 	object-fit: cover;
 }
 
-.food-image h1{
+.food-image h1 {
 	position: absolute;
 	bottom: 0;
-	color:white;
-	height:fit-content;
+	color: white;
+	height: fit-content;
 }
 
-.food-info{
+.food-info {
 	padding: 1rem 2rem 2rem 2rem;
 	height: auto;
 }
 
-.food-description, 
+.food-description,
 .food-allergies,
-.food-nutrition{
-	height:fit-content;
+.food-nutrition {
+	height: fit-content;
 	border-bottom: 1px solid black;
-	padding:1rem;
+	padding: 1rem;
 }
 
-.food-info h2{
+.food-info h2 {
 	margin-bottom: 1rem;
 }
 
-.food-info p{
+.food-info p {
 	line-height: 1.5rem;
 }
 
-.allergens-list{
+.allergens-list {
 	display: flex;
 	list-style-type: none;
 }
 
-.allergens-list li{
+.allergens-list li {
 	margin-right: 2rem;
 }
 
@@ -216,4 +216,3 @@
 		transform: translate(50%, -50%);
 	}
 }
-

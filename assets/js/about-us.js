@@ -6,8 +6,8 @@ const height = test.height;
 const menuButton = document.querySelector('#menu-button')
 const rootElement = document.documentElement
 
-const color_black =  '#151618';
-const color_green= '#2F452D';
+const color_black = '#151618';
+const color_green = '#2F452D';
 const color_red = '#C21807';
 const color_yellow = '#FFD700';
 const color_purple = '#702963';
@@ -62,13 +62,13 @@ let animation_playing = false;
 let animation_finished = false;
 let current_timeline = null;
 
-function animate_m(){
+function animate_m() {
 
   // let ketupat_object = document.getElementById("ketupat");
   // let lantern_object = document.getElementById("lanterns");
   // let ketupat_docu = ketupat_object.contentDocument;
   // let lantern_docu = lantern_object.contentDocument;
-  
+
   // if (ketupat_docu){
   //   var ketupat_path = ketupat_docu.querySelector("path");
   //   var lantern_path = lantern_docu.querySelector("path");
@@ -81,66 +81,66 @@ function animate_m(){
   //   lantern_path.style.strokeDasharray = lantern_path_length;
   //   lantern_path.style.strokeDashoffset = lantern_path_length;
   // }
-  
+
   const timeline = anime.timeline({
     easing: 'easeInOutQuad',
     autoplay: false,
-    complete: function(){
+    complete: function () {
       animation_playing = false;
       animation_finished = true;
     },
-    begin: function(){
+    begin: function () {
       animation_playing = true;
     }
   })
   timeline.add({
     targets: '.background-fill',
     background: color_green,
-      width: [
-        function(el) {
-          return 0;
-        },
-        function (el){
-          return height;
-        }],
-  
-      height: [
-        function(el){
-          return 0;
-        },
-        function(el){
-          return height;
-        }],
-  
-      borderRadius:['50%', '50%'],
-      duration: 900
-  })
-  .add({
-    targets: '.background-fill',
-    background: color_green,
-      width: [        
-        function(el) {
-          return height;
-        },
-        function (el){
-          return width;
-        }],
-      height: [        
-        function(el) {
-        return height;
+    width: [
+      function (el) {
+        return 0;
       },
-      function (el){
+      function (el) {
         return height;
       }],
-      borderRadius:['50%', '0%'],
+
+    height: [
+      function (el) {
+        return 0;
+      },
+      function (el) {
+        return height;
+      }],
+
+    borderRadius: ['50%', '50%'],
+    duration: 900
+  })
+    .add({
+      targets: '.background-fill',
+      background: color_green,
+      width: [
+        function (el) {
+          return height;
+        },
+        function (el) {
+          return width;
+        }],
+      height: [
+        function (el) {
+          return height;
+        },
+        function (el) {
+          return height;
+        }],
+      borderRadius: ['50%', '0%'],
     })
-  .add({
-    targets: ['#about-us p', '#malay', '#chinese', '#indian'],
-    color: color_yellow
-  }, 0)
-  .add({      
-    targets: '#about-us .container .row',
-    borderColor: ['#000000','#FFD700'],
+    .add({
+      targets: ['#about-us p', '#malay', '#chinese', '#indian'],
+      color: color_yellow
+    }, 0)
+    .add({
+      targets: '#about-us .container .row',
+      borderColor: ['#000000', '#FFD700'],
     }, 0)
   // .add({
   //   targets: ketupat_path,
@@ -160,7 +160,7 @@ function animate_m(){
   // })
   // .add({
   //   targets: lantern_path,
-    
+
   //   translateY:{
   //     value: -800,
   //     duration: 800,
@@ -175,19 +175,19 @@ function animate_m(){
   //     lantern_object.style.opacity = 1;  // Show the SVG when the animation starts
   //   }
   //   }, 1000)
-  timeline.type='m';
+  timeline.type = 'm';
   return timeline;
 }
 
-function animate_c(){
+function animate_c() {
   const timeline = anime.timeline({
     easing: 'easeInOutQuad',
     autoplay: false,
-    complete: function(){
+    complete: function () {
       animation_playing = false;
       animation_finished = true;
     },
-    begin: function(){
+    begin: function () {
       animation_playing = true;
     }
   })
@@ -196,61 +196,61 @@ function animate_c(){
     targets: '.background-fill',
     background: color_red,
     width: [
-      function(el) {
+      function (el) {
         return 0;
       },
-      function (el){
+      function (el) {
         return height;
       }],
 
-      height: [
-        function(el){
-          return 0;
-        },
+    height: [
+      function (el) {
+        return 0;
+      },
 
-        function(el){
-          return height;
+      function (el) {
+        return height;
       }],
-      borderRadius:['50%', '50%'],
-      duration: 900
+    borderRadius: ['50%', '50%'],
+    duration: 900
   })
-  .add({
-    targets: '.background-fill',
-    background: color_yellow,
-      width: [        
-        function(el) {
+    .add({
+      targets: '.background-fill',
+      background: color_yellow,
+      width: [
+        function (el) {
           return height;
         },
-        function (el){
+        function (el) {
           return width;
         }],
-      height: [        
-        function(el) {
-        return height;
-      },
-      function (el){
-        return height;
-      }],
-      borderRadius:['50%', '0%'],
+      height: [
+        function (el) {
+          return height;
+        },
+        function (el) {
+          return height;
+        }],
+      borderRadius: ['50%', '0%'],
     })
     .add({
       targets: ['#about-us p', '#malay', '#chinese', '#indian'],
       color: color_black
-    },0)
+    }, 0)
 
-  timeline.type= 'c';
+  timeline.type = 'c';
   return timeline;
 }
 
-function animate_i(){
+function animate_i() {
   const timeline = anime.timeline({
     easing: 'easeInOutQuad',
     autoplay: false,
-    complete: function(){
+    complete: function () {
       animation_playing = false;
       animation_finished = true;
     },
-    begin: function(){
+    begin: function () {
       animation_playing = true;
     }
   })
@@ -259,66 +259,66 @@ function animate_i(){
     targets: '.background-fill',
     background: color_black,
     width: [
-      function(el) {
+      function (el) {
         return 0;
       },
-      function (el){
+      function (el) {
         return height;
       }],
 
-      height: [
-        function(el){
-          return 0;
-        },
+    height: [
+      function (el) {
+        return 0;
+      },
 
-        function(el){
-          return height;
+      function (el) {
+        return height;
       }],
-      borderRadius:['50%', '50%'],
-      duration: 900
+    borderRadius: ['50%', '50%'],
+    duration: 900
   })
-  .add({
-    targets: '.background-fill',
-    background: color_purple,
-      width: [        
-        function(el) {
+    .add({
+      targets: '.background-fill',
+      background: color_purple,
+      width: [
+        function (el) {
           return height;
         },
-        function (el){
+        function (el) {
           return width;
         }],
-      height: [        
-        function(el) {
-        return height;
-      },
-      function (el){
-        return height;
-      }],
-      borderRadius:['50%', '0%'],
+      height: [
+        function (el) {
+          return height;
+        },
+        function (el) {
+          return height;
+        }],
+      borderRadius: ['50%', '0%'],
     })
     .add({
       targets: ['#about-us p', '#malay', '#chinese', '#indian'],
       color: color_white
-    },0)
-    .add({      
+    }, 0)
+    .add({
       targets: '#about-us .container .row',
       borderColor: [color_black, color_white],
-      },0)
-  timeline.type= 'i';
+    }, 0)
+  timeline.type = 'i';
   return timeline;
 }
 
-document.getElementById('malay').addEventListener('mouseover', function() {
-  if(animation_playing){
+document.getElementById('malay').addEventListener('mouseover', function () {
+  if (animation_playing) {
     return;
   }
 
-  if(current_timeline === null){
+  if (current_timeline === null) {
     current_timeline = animate_m();
     current_timeline.play();
   }
 
-  else if(current_timeline.type != 'm'){
+  else if (current_timeline.type != 'm') {
     current_timeline.reverse();
     current_timeline.play();
 
@@ -327,10 +327,10 @@ document.getElementById('malay').addEventListener('mouseover', function() {
       current_timeline.play();
     });
   }
-  else if (current_timeline && current_timeline.type == 'm' && animation_finished){
+  else if (current_timeline && current_timeline.type == 'm' && animation_finished) {
     current_timeline.reverse();
     current_timeline.play();
-    current_timeline.finished.then(()=>{
+    current_timeline.finished.then(() => {
       current_timeline = null;
     });
   }
@@ -338,31 +338,31 @@ document.getElementById('malay').addEventListener('mouseover', function() {
   next_timeline = null;
 });
 
-document.getElementById('chinese').addEventListener('mouseover', function() {
-  if(animation_playing){
+document.getElementById('chinese').addEventListener('mouseover', function () {
+  if (animation_playing) {
     return;
   }
 
-  else if(current_timeline === null){
+  else if (current_timeline === null) {
     current_timeline = animate_c();
     current_timeline.play();
   }
 
-  else if(current_timeline.type != 'c'){
+  else if (current_timeline.type != 'c') {
     current_timeline.reverse();
     current_timeline.play();
 
-    current_timeline.finished.then(()=>{
+    current_timeline.finished.then(() => {
       current_timeline = animate_c();
       current_timeline.play();
     });
 
   }
-  else if (current_timeline && current_timeline.type == 'c' && animation_finished){
+  else if (current_timeline && current_timeline.type == 'c' && animation_finished) {
     current_timeline.reverse();
     current_timeline.play();
 
-    current_timeline.finished.then(()=>{
+    current_timeline.finished.then(() => {
       current_timeline = null;
     });
   }
@@ -370,31 +370,31 @@ document.getElementById('chinese').addEventListener('mouseover', function() {
   next_timeline = null;
 });
 
-document.getElementById('indian').addEventListener('mouseover', function() {
-  if(animation_playing){
+document.getElementById('indian').addEventListener('mouseover', function () {
+  if (animation_playing) {
     return;
   }
 
-  else if(current_timeline === null){
+  else if (current_timeline === null) {
     current_timeline = animate_i();
     current_timeline.play();
   }
 
-  else if(current_timeline.type != 'i'){
+  else if (current_timeline.type != 'i') {
     current_timeline.reverse();
     current_timeline.play();
 
-    current_timeline.finished.then(()=>{
+    current_timeline.finished.then(() => {
       current_timeline = animate_i();
       current_timeline.play();
     });
 
   }
-  else if (current_timeline && current_timeline.type == 'i' && animation_finished){
+  else if (current_timeline && current_timeline.type == 'i' && animation_finished) {
     current_timeline.reverse();
     current_timeline.play();
 
-    current_timeline.finished.then(()=>{
+    current_timeline.finished.then(() => {
       current_timeline = null;
     });
   }
@@ -402,3 +402,25 @@ document.getElementById('indian').addEventListener('mouseover', function() {
   next_timeline = null;
 });
 
+const quotes = [
+  { text: "Food is the ingredient that binds us together.", author: "Anonymous" },
+  { text: "Cooking is an art, but all art requires knowing something about the techniques and materials.", author: "Nathan Myhrvold" },
+  { text: "One cannot think well, love well, sleep well, if one has not dined well.", author: "Virginia Woolf" },
+  { text: "The secret of success in life is to eat what you like and let the food fight it out inside.", author: "Mark Twain" },
+  { text: "The only thing I like better than talking about food is eating.", author: "John Walters" }
+];
+
+// Function to select a random quote
+function getRandomQuote() {
+  return quotes[Math.floor(Math.random() * quotes.length)];
+}
+
+// Function to display the quote
+function displayQuote() {
+  const quote = getRandomQuote();
+  document.getElementById('quote-text').textContent = quote.text;
+  document.getElementById('quote-author').textContent = `${ quote.author }`;
+}
+
+// Display a new quote every time the page loads
+displayQuote();
