@@ -1,3 +1,33 @@
+:root {
+    --font-base: "Poppins";
+    --color-black: #151618;
+    --color-gray: #899499;
+    --color-purple: #702963;
+    --color-red: #C21807;
+    --color-yellow: #ffd700;
+    --color-green: #2f452d;
+    --color-white: #fafafa;
+    --color-blue: #4169E1;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', medium;
+    background-color: var(--color-white);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.9)),
+        url('https://www.shutterstock.com/image-vector/seamless-texture-kitchen-doodle-sketch-600nw-278535350.jpg');
+}
+
 #about-us p,
 #the-team p,
 #mission-and-vision p{
