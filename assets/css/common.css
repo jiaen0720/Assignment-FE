@@ -21,7 +21,7 @@
 :root {
     --font-base: "Poppins";
     --color-black: #151618;
-    --color-white: #fafafa;
+    --color-white: #fefefe;
     --color-medium-gray: #cccccc;
     --color-light-gray: #f5f5f5;
     --color-gray: #899499;
@@ -101,6 +101,10 @@ body {
     height: 2.5rem;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--color-white);
+}
+
 .navbar .navbar-nav .nav-item a {
     border-bottom: 0.1875rem solid transparent;
     transition: border-bottom 0.3s ease, color 0.3s ease;
@@ -112,7 +116,6 @@ body {
     transition: border-bottom 0.3s ease, color 0.3s ease;
 }
 
-.dropdown-menu .dropdown-item:focus,
 .dropdown-menu .dropdown-item:active {
     background-color: var(--color-light-gray);
 }
@@ -139,7 +142,7 @@ footer ul li:hover a {
     border-radius: 9rem;
     color: var(--color-red);
     background-color: transparent;
-    font-weight: 600;
+    font-weight: 700;
     overflow: hidden;
     transition: scale 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -165,7 +168,24 @@ footer ul li:hover a {
 .btn-contact-us:hover {
     color: var(--color-white);
     scale: 1.1;
-    /* box-shadow: 0 0 1.25rem var(--color-light-gray); */
+}
+
+.btn-favorite-cart {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    color: var(--color-red);
+    border: 0.125rem solid var(--color-red);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-favorite-cart:hover {
+    transform: scale(1.1);
+    background-color: var(--color-red);
+    color: var(--color-white);
+    transition: 0.3s ease;
 }
 
 .btn-go-to-top {

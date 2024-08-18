@@ -43,16 +43,16 @@
                     </div>
                 </a>
             </div>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                         <div class="d-flex flex-column lh-1">
                             <p class="mb-0">Malaysian Cuisine</p>
-                            <p class="mb-0 fs-6 fw-light text-muted">The Food Paradise</p>
+                            <p class="mb-0 fs-6 fw-light">The Food Paradise</p>
                         </div>
                     </h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -63,7 +63,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Explore</a>
-                            <ul class="dropdown-menu shadow-sm">
+                            <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
                                 <li><a class="dropdown-item border-0" href="peninsular.html">Peninsular</a></li>
                                 <li><a class="dropdown-item border-0" href="borneo.html">Borneo</a></li>
                             </ul>
@@ -79,8 +79,11 @@
                         </li>
                     </ul>
                     <div class="d-flex justify-content-start align-items-center mx-2 mt-3 mt-lg-0 ">
-                        <a href="contact-us.html" class="btn-link">
+                        <a href="contact-us.html">
                             <button type="button" class="btn-contact-us">Contact Us</button>
+                        </a>
+                        <a href="favorite.html" class="mx-2">
+                            <button class="btn-favorite-cart"><i class="fa fa-heart"></i></button>
                         </a>
                     </div>
                 </div>
@@ -104,7 +107,7 @@
             </div>
             <div class="d-flex justify-content-center" data-aos="fade-down" data-aos-delay="100">
                 <video controls id="set-video" class="d-flex justify-content-center" autoplay>
-                    <source src="assets/videos/join-us-video-1.mp4" type="video/mp4">
+                    <source src="assets/videos/join-us-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -376,10 +379,10 @@
     <div class="overlay" id="overlay" onclick="closeForm()"></div>
     <div class="form-popup" id="regForm">
         <div class="form-container">
-            <!--Return Button
-                <div class="isolate d-flex justify-content-center">
-                    <input type="button" onclick="closeForm()" value="Return" class="return-button" id = "return-btn-ani">
-                </div>-->
+            <!-- Return Button -->
+            <div class="">
+                <input type="button" onclick="closeForm()" value="&#9166;" class="return-button">
+            </div>
             <div class="text form-title">
                 Registration Form<br>
                 . 2024 Malaysian Food Tour .
@@ -395,15 +398,15 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="assets/images/PeninCarousel3.png" class="d-block w-100 img-fluid" alt="Slide 1"
+                        <img src="assets/images/peninsular-carousel-1.png" class="d-block w-100 img-fluid" alt="PeninCarousel3"
                             onclick="openImageModal(this.src)">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/images/PeninCarousel4.png" class="d-block w-100 img-fluid" alt="Slide 2"
+                        <img src="assets/images/peninsular-carousel-4.png" class="d-block w-100 img-fluid" alt="PeninCarousel4"
                             onclick="openImageModal(this.src)">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/images/PeninCarousel2.png" class="d-block w-100 img-fluid" alt="Slide 3"
+                        <img src="assets/images/peninsular-carousel-2.png" class="d-block w-100 img-fluid" alt="PeninCarousel2"
                             onclick="openImageModal(this.src)">
                     </div>
                 </div>
@@ -548,19 +551,22 @@
     </div>
 
     <!-- Bootstrap -->
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
     <!-- AOS -->
-    <script type="text/javascript" src="assets/js/aos.js"></script>
+    <script src="assets/js/aos.js"></script>
 
-    <script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Animation -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- JQuery -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
 
     <!-- Common -->
-    <script type="text/javascript" src="assets/js/common.js"></script>
+    <script src="assets/js/common.js"></script>
 
     <!-- Personal -->
-    <script type="text/javascript" src="assets/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
 
     <script>AOS.init();</script>
 </body>

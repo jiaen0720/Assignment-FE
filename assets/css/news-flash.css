@@ -16,7 +16,7 @@ h1 {
     border: none;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 0.25rem 1rem var( --color-medium-gray);
+    box-shadow: 0 0.25rem 1rem var(--color-medium-gray);
     transition: 0.3s ease;
 }
 
@@ -32,7 +32,7 @@ h1 {
 
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: var( --color-medium-gray);
+    background-color: var(--color-medium-gray);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
@@ -51,6 +51,16 @@ h1 {
 .carousel-control-next-icon {
     width: 1rem;
     height: 1rem;
+}
+
+#top-stories .card p,
+#top-stories .card h5 {
+    transition: color 0.3s ease;
+}
+
+#top-stories .card:hover p,
+#top-stories .card:hover h5 {
+    color: var(--color-red);
 }
 
 #topics h4 {

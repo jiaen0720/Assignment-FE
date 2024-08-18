@@ -7,11 +7,11 @@ const menuButton = document.querySelector('#menu-button')
 const rootElement = document.documentElement
 
 const color_black = '#151618';
-const color_green = '#2F452D';
-const color_red = '#C21807';
-const color_yellow = '#FFD700';
+const color_green = '#2f452d';
+const color_red = '#c21807';
+const color_yellow = '#ffd700';
 const color_purple = '#702963';
-const color_white = '#fafafa';
+const color_white = '#fefefe';
 
 const alex_span = document.querySelector('.alex');
 const alex_figure = document.querySelector('#alex');

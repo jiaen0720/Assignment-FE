@@ -31,13 +31,16 @@ window.addEventListener('load', updateVideoSource);
 function openForm() {
   document.getElementById("overlay").style.display = "block";
   document.getElementById("regForm").style.display = "block";
+  document.body.style.overflow = 'hidden';
 }
 
 async function closeForm() {
   await sleep(200);
   document.getElementById("overlay").style.display = "none";
   document.getElementById("regForm").style.display = "none";
+  document.body.style.overflow = 'auto';
 }
+
 
 // Delay Function
 function sleep(ms) {
@@ -74,6 +77,10 @@ document.getElementById('regForm').addEventListener('input', function () {
     submitBtn.classList.remove('valid');
     submitBtn.disabled = true;
   }
+});
+
+document.getElementById('regForm').addEventListener('submit', function () {
+    closeForm();
 });
 
 //Partnership Info
