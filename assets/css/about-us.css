@@ -75,6 +75,7 @@ body {
 }
 
 #about-us .container .row {
+    padding: 3rem 0;
     border-top: 2px solid var(--color-black);
     border-bottom: 2px solid var(--color-black);
 }
