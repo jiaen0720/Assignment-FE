@@ -15,8 +15,8 @@ let allNews = [];
 async function fetchNews() {
     try {
         // const language = languageFilter.value;
-        // const response = await fetch(`https://newsapi.org/v2/everything?apiKey=${apiKey}&q=Malaysian+cuisine+OR+Malaysian+restaurant+OR+Malaysian+food&language=${language}&pageSize=100`);
-        const response =  await fetch('./assets/data/newsapi.json');
+        const response = await fetch(`https://newsapi.org/v2/everything?apiKey=${apiKey}&q=Malaysian+cuisine+OR+Malaysian+restaurant+OR+Malaysian+food&language=en&pageSize=100`);
+        //const response =  await fetch('./assets/data/newsapi.json');
 
         if (!response.ok) {
             throw new Error('Network response was not ok');
